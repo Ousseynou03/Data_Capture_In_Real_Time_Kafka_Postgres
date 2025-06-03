@@ -1,230 +1,90 @@
 {
   "namespace": "com.dione.dto",
   "type": "record",
-  "name": "Invoke",
+  "name": "Order",
   "fields": [
     {
-      "name": "GSW_PHONE",
+      "name": "orderId",
       "type": "string"
     },
     {
-      "name": "GSW_AGENT_REQ_TYPE",
+      "name": "customerId",
       "type": "string"
     },
     {
-      "name": "GSW_CALLING_LIST",
+      "name": "orderDate",
       "type": "string"
     },
     {
-      "name": "GSW_TZ_NAME",
+      "name": "shippingAddress",
       "type": "string"
     },
     {
-      "name": "GSW_CAMPAIGN_NAME",
+      "name": "billingAddress",
       "type": "string"
     },
     {
-      "name": "GSW_FROM",
+      "name": "orderStatus",
       "type": "string"
     },
     {
-      "name": "GSW_UNTIL",
+      "name": "paymentMethod",
       "type": "string"
     },
     {
-      "name": "IDENTIFIANT_SURVEIL",
+      "name": "totalAmount",
       "type": "string"
     },
     {
-      "name": "NBR_QUESTIONS",
+      "name": "currency",
       "type": "string"
     },
     {
-      "name": "LNG_SURVEIL",
+      "name": "productId_1",
       "type": "string"
     },
     {
-      "name": "MSG_ACCEUIL",
+      "name": "productName_1",
       "type": "string"
     },
     {
-      "name": "MSG_CONCLUSION",
+      "name": "quantity_1",
       "type": "string"
     },
     {
-      "name": "IDENTIFIANT_QX1",
+      "name": "price_1",
       "type": "string"
     },
     {
-      "name": "NBR_CHOIX_Q1",
+      "name": "productId_2",
       "type": "string"
     },
     {
-      "name": "IDENTIFIANT_QX2",
+      "name": "productName_2",
       "type": "string"
     },
     {
-      "name": "NBR_CHOIX_Q2",
+      "name": "quantity_2",
       "type": "string"
     },
     {
-      "name": "IDENTIFIANT_QX3",
+      "name": "price_2",
       "type": "string"
     },
     {
-      "name": "NBR_CHOIX_Q3",
+      "name": "productId_3",
       "type": "string"
     },
     {
-      "name": "IDENTIFIANT_QX4",
+      "name": "productName_3",
       "type": "string"
     },
     {
-      "name": "NBR_CHOIX_Q4",
+      "name": "quantity_3",
       "type": "string"
     },
     {
-      "name": "IDENTIFIANT_QX5",
-      "type": "string"
-    },
-    {
-      "name": "NBR_CHOIX_Q5",
-      "type": "string"
-    },
-    {
-      "name": "IDENTIFIANT_QX6",
-      "type": "string"
-    },
-    {
-      "name": "NBR_CHOIX_Q6",
-      "type": "string"
-    },
-    {
-      "name": "IDENTIFIANT_QX7",
-      "type": "string"
-    },
-    {
-      "name": "NBR_CHOIX_Q7",
-      "type": "string"
-    },
-    {
-      "name": "externalDataReference",
-      "type": "string"
-    },
-    {
-      "name": "recipientEmail",
-      "type": "string"
-    },
-    {
-      "name": "distributionChannel",
-      "type": "string"
-    },
-    {
-      "name": "XMContactID",
-      "type": "string"
-    },
-    {
-      "name": "canal_interaction_client",
-      "type": "string"
-    },
-    {
-      "name": "code_distributeur",
-      "type": "string"
-    },
-    {
-      "name": "code_pdv",
-      "type": "string"
-    },
-    {
-      "name": "id_commande",
-      "type": "string"
-    },
-    {
-      "name": "id_action",
-      "type": "string"
-    },
-    {
-      "name": "id_demande_identification",
-      "type": "string"
-    },
-    {
-      "name": "id_demande_resiliation",
-      "type": "string"
-    },
-    {
-      "name": "id_case",
-      "type": "string"
-    },
-    {
-      "name": "id_user_interaction",
-      "type": "string"
-    },
-    {
-      "name": "statut_case",
-      "type": "string"
-    },
-    {
-      "name": "interaction_client",
-      "type": "string"
-    },
-    {
-      "name": "numero_appelant",
-      "type": "string"
-    },
-    {
-      "name": "numero_client",
-      "type": "string"
-    },
-    {
-      "name": "numero_contact_client",
-      "type": "string"
-    },
-    {
-      "name": "offre",
-      "type": "string"
-    },
-    {
-      "name": "ville_partenaire",
-      "type": "string"
-    },
-    {
-      "name": "prestataire",
-      "type": "string"
-    },
-    {
-      "name": "id_profil",
-      "type": "string"
-    },
-    {
-      "name": "source_contact",
-      "type": "string"
-    },
-    {
-      "name": "type_interaction_crm",
-      "type": "string"
-    },
-    {
-      "name": "type_offre",
-      "type": "string"
-    },
-    {
-      "name": "date_interaction_crm",
-      "type": "string"
-    },
-    {
-      "name": "id_client",
-      "type": "string"
-    },
-    {
-      "name": "region_partenaire",
-      "type": "string"
-    },
-    {
-      "name": "ancienete_ligne",
-      "type": "string"
-    },
-    {
-      "name": "login_rvr",
+      "name": "price_3",
       "type": "string"
     }
   ]

@@ -12,7 +12,7 @@ public class OrderController {
     @Autowired
     private KafkaAvroProducer producer;
 
-    @PostMapping("/orders")
+    @PostMapping("/invoke")
     public String sendMessage(@RequestBody Order order) {
         producer.send(order);
         return "message published !";

@@ -13,8 +13,8 @@ import org.apache.avro.message.SchemaStore;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class Order extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 2771640507101805833L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Invoke\",\"namespace\":\"com.javatechie.dto\",\"fields\":[{\"name\":\"GSW_PHONE\",\"type\":\"string\"},{\"name\":\"GSW_AGENT_REQ_TYPE\",\"type\":\"string\"},{\"name\":\"GSW_CALLING_LIST\",\"type\":\"string\"},{\"name\":\"GSW_TZ_NAME\",\"type\":\"string\"},{\"name\":\"GSW_CAMPAIGN_NAME\",\"type\":\"string\"},{\"name\":\"GSW_FROM\",\"type\":\"string\"},{\"name\":\"GSW_UNTIL\",\"type\":\"string\"},{\"name\":\"IDENTIFIANT_SURVEIL\",\"type\":\"string\"},{\"name\":\"NBR_QUESTIONS\",\"type\":\"string\"},{\"name\":\"LNG_SURVEIL\",\"type\":\"string\"},{\"name\":\"MSG_ACCEUIL\",\"type\":\"string\"},{\"name\":\"MSG_CONCLUSION\",\"type\":\"string\"},{\"name\":\"IDENTIFIANT_QX1\",\"type\":\"string\"},{\"name\":\"NBR_CHOIX_Q1\",\"type\":\"string\"},{\"name\":\"IDENTIFIANT_QX2\",\"type\":\"string\"},{\"name\":\"NBR_CHOIX_Q2\",\"type\":\"string\"},{\"name\":\"IDENTIFIANT_QX3\",\"type\":\"string\"},{\"name\":\"NBR_CHOIX_Q3\",\"type\":\"string\"},{\"name\":\"IDENTIFIANT_QX4\",\"type\":\"string\"},{\"name\":\"NBR_CHOIX_Q4\",\"type\":\"string\"},{\"name\":\"IDENTIFIANT_QX5\",\"type\":\"string\"},{\"name\":\"NBR_CHOIX_Q5\",\"type\":\"string\"},{\"name\":\"IDENTIFIANT_QX6\",\"type\":\"string\"},{\"name\":\"NBR_CHOIX_Q6\",\"type\":\"string\"},{\"name\":\"IDENTIFIANT_QX7\",\"type\":\"string\"},{\"name\":\"NBR_CHOIX_Q7\",\"type\":\"string\"},{\"name\":\"externalDataReference\",\"type\":\"string\"},{\"name\":\"recipientEmail\",\"type\":\"string\"},{\"name\":\"distributionChannel\",\"type\":\"string\"},{\"name\":\"XMContactID\",\"type\":\"string\"},{\"name\":\"canal_interaction_client\",\"type\":\"string\"},{\"name\":\"code_distributeur\",\"type\":\"string\"},{\"name\":\"code_pdv\",\"type\":\"string\"},{\"name\":\"id_commande\",\"type\":\"string\"},{\"name\":\"id_action\",\"type\":\"string\"},{\"name\":\"id_demande_identification\",\"type\":\"string\"},{\"name\":\"id_demande_resiliation\",\"type\":\"string\"},{\"name\":\"id_case\",\"type\":\"string\"},{\"name\":\"id_user_interaction\",\"type\":\"string\"},{\"name\":\"statut_case\",\"type\":\"string\"},{\"name\":\"interaction_client\",\"type\":\"string\"},{\"name\":\"numero_appelant\",\"type\":\"string\"},{\"name\":\"numero_client\",\"type\":\"string\"},{\"name\":\"numero_contact_client\",\"type\":\"string\"},{\"name\":\"offre\",\"type\":\"string\"},{\"name\":\"ville_partenaire\",\"type\":\"string\"},{\"name\":\"prestataire\",\"type\":\"string\"},{\"name\":\"id_profil\",\"type\":\"string\"},{\"name\":\"source_contact\",\"type\":\"string\"},{\"name\":\"type_interaction_crm\",\"type\":\"string\"},{\"name\":\"type_offre\",\"type\":\"string\"},{\"name\":\"date_interaction_crm\",\"type\":\"string\"},{\"name\":\"id_client\",\"type\":\"string\"},{\"name\":\"region_partenaire\",\"type\":\"string\"},{\"name\":\"ancienete_ligne\",\"type\":\"string\"},{\"name\":\"login_rvr\",\"type\":\"string\"}]}");
+  private static final long serialVersionUID = -19197640573391496L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Order\",\"namespace\":\"com.dione.dto\",\"fields\":[{\"name\":\"orderId\",\"type\":\"string\"},{\"name\":\"customerId\",\"type\":\"string\"},{\"name\":\"orderDate\",\"type\":\"string\"},{\"name\":\"shippingAddress\",\"type\":\"string\"},{\"name\":\"billingAddress\",\"type\":\"string\"},{\"name\":\"orderStatus\",\"type\":\"string\"},{\"name\":\"paymentMethod\",\"type\":\"string\"},{\"name\":\"totalAmount\",\"type\":\"string\"},{\"name\":\"currency\",\"type\":\"string\"},{\"name\":\"productId_1\",\"type\":\"string\"},{\"name\":\"productName_1\",\"type\":\"string\"},{\"name\":\"quantity_1\",\"type\":\"string\"},{\"name\":\"price_1\",\"type\":\"string\"},{\"name\":\"productId_2\",\"type\":\"string\"},{\"name\":\"productName_2\",\"type\":\"string\"},{\"name\":\"quantity_2\",\"type\":\"string\"},{\"name\":\"price_2\",\"type\":\"string\"},{\"name\":\"productId_3\",\"type\":\"string\"},{\"name\":\"productName_3\",\"type\":\"string\"},{\"name\":\"quantity_3\",\"type\":\"string\"},{\"name\":\"price_3\",\"type\":\"string\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -40,73 +40,38 @@ public class Order extends org.apache.avro.specific.SpecificRecordBase implement
     return new BinaryMessageDecoder<Order>(MODEL$, SCHEMA$, resolver);
   }
 
-  /** Serializes this Invoke to a ByteBuffer. */
+  /** Serializes this Order to a ByteBuffer. */
   public java.nio.ByteBuffer toByteBuffer() throws java.io.IOException {
     return ENCODER.encode(this);
   }
 
-  /** Deserializes a Invoke from a ByteBuffer. */
+  /** Deserializes a Order from a ByteBuffer. */
   public static Order fromByteBuffer(
       java.nio.ByteBuffer b) throws java.io.IOException {
     return DECODER.decode(b);
   }
 
-  @Deprecated public java.lang.CharSequence GSW_PHONE;
-  @Deprecated public java.lang.CharSequence GSW_AGENT_REQ_TYPE;
-  @Deprecated public java.lang.CharSequence GSW_CALLING_LIST;
-  @Deprecated public java.lang.CharSequence GSW_TZ_NAME;
-  @Deprecated public java.lang.CharSequence GSW_CAMPAIGN_NAME;
-  @Deprecated public java.lang.CharSequence GSW_FROM;
-  @Deprecated public java.lang.CharSequence GSW_UNTIL;
-  @Deprecated public java.lang.CharSequence IDENTIFIANT_SURVEIL;
-  @Deprecated public java.lang.CharSequence NBR_QUESTIONS;
-  @Deprecated public java.lang.CharSequence LNG_SURVEIL;
-  @Deprecated public java.lang.CharSequence MSG_ACCEUIL;
-  @Deprecated public java.lang.CharSequence MSG_CONCLUSION;
-  @Deprecated public java.lang.CharSequence IDENTIFIANT_QX1;
-  @Deprecated public java.lang.CharSequence NBR_CHOIX_Q1;
-  @Deprecated public java.lang.CharSequence IDENTIFIANT_QX2;
-  @Deprecated public java.lang.CharSequence NBR_CHOIX_Q2;
-  @Deprecated public java.lang.CharSequence IDENTIFIANT_QX3;
-  @Deprecated public java.lang.CharSequence NBR_CHOIX_Q3;
-  @Deprecated public java.lang.CharSequence IDENTIFIANT_QX4;
-  @Deprecated public java.lang.CharSequence NBR_CHOIX_Q4;
-  @Deprecated public java.lang.CharSequence IDENTIFIANT_QX5;
-  @Deprecated public java.lang.CharSequence NBR_CHOIX_Q5;
-  @Deprecated public java.lang.CharSequence IDENTIFIANT_QX6;
-  @Deprecated public java.lang.CharSequence NBR_CHOIX_Q6;
-  @Deprecated public java.lang.CharSequence IDENTIFIANT_QX7;
-  @Deprecated public java.lang.CharSequence NBR_CHOIX_Q7;
-  @Deprecated public java.lang.CharSequence externalDataReference;
-  @Deprecated public java.lang.CharSequence recipientEmail;
-  @Deprecated public java.lang.CharSequence distributionChannel;
-  @Deprecated public java.lang.CharSequence XMContactID;
-  @Deprecated public java.lang.CharSequence canal_interaction_client;
-  @Deprecated public java.lang.CharSequence code_distributeur;
-  @Deprecated public java.lang.CharSequence code_pdv;
-  @Deprecated public java.lang.CharSequence id_commande;
-  @Deprecated public java.lang.CharSequence id_action;
-  @Deprecated public java.lang.CharSequence id_demande_identification;
-  @Deprecated public java.lang.CharSequence id_demande_resiliation;
-  @Deprecated public java.lang.CharSequence id_case;
-  @Deprecated public java.lang.CharSequence id_user_interaction;
-  @Deprecated public java.lang.CharSequence statut_case;
-  @Deprecated public java.lang.CharSequence interaction_client;
-  @Deprecated public java.lang.CharSequence numero_appelant;
-  @Deprecated public java.lang.CharSequence numero_client;
-  @Deprecated public java.lang.CharSequence numero_contact_client;
-  @Deprecated public java.lang.CharSequence offre;
-  @Deprecated public java.lang.CharSequence ville_partenaire;
-  @Deprecated public java.lang.CharSequence prestataire;
-  @Deprecated public java.lang.CharSequence id_profil;
-  @Deprecated public java.lang.CharSequence source_contact;
-  @Deprecated public java.lang.CharSequence type_interaction_crm;
-  @Deprecated public java.lang.CharSequence type_offre;
-  @Deprecated public java.lang.CharSequence date_interaction_crm;
-  @Deprecated public java.lang.CharSequence id_client;
-  @Deprecated public java.lang.CharSequence region_partenaire;
-  @Deprecated public java.lang.CharSequence ancienete_ligne;
-  @Deprecated public java.lang.CharSequence login_rvr;
+  @Deprecated public java.lang.CharSequence orderId;
+  @Deprecated public java.lang.CharSequence customerId;
+  @Deprecated public java.lang.CharSequence orderDate;
+  @Deprecated public java.lang.CharSequence shippingAddress;
+  @Deprecated public java.lang.CharSequence billingAddress;
+  @Deprecated public java.lang.CharSequence orderStatus;
+  @Deprecated public java.lang.CharSequence paymentMethod;
+  @Deprecated public java.lang.CharSequence totalAmount;
+  @Deprecated public java.lang.CharSequence currency;
+  @Deprecated public java.lang.CharSequence productId_1;
+  @Deprecated public java.lang.CharSequence productName_1;
+  @Deprecated public java.lang.CharSequence quantity_1;
+  @Deprecated public java.lang.CharSequence price_1;
+  @Deprecated public java.lang.CharSequence productId_2;
+  @Deprecated public java.lang.CharSequence productName_2;
+  @Deprecated public java.lang.CharSequence quantity_2;
+  @Deprecated public java.lang.CharSequence price_2;
+  @Deprecated public java.lang.CharSequence productId_3;
+  @Deprecated public java.lang.CharSequence productName_3;
+  @Deprecated public java.lang.CharSequence quantity_3;
+  @Deprecated public java.lang.CharSequence price_3;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -117,182 +82,77 @@ public class Order extends org.apache.avro.specific.SpecificRecordBase implement
 
   /**
    * All-args constructor.
-   * @param GSW_PHONE The new value for GSW_PHONE
-   * @param GSW_AGENT_REQ_TYPE The new value for GSW_AGENT_REQ_TYPE
-   * @param GSW_CALLING_LIST The new value for GSW_CALLING_LIST
-   * @param GSW_TZ_NAME The new value for GSW_TZ_NAME
-   * @param GSW_CAMPAIGN_NAME The new value for GSW_CAMPAIGN_NAME
-   * @param GSW_FROM The new value for GSW_FROM
-   * @param GSW_UNTIL The new value for GSW_UNTIL
-   * @param IDENTIFIANT_SURVEIL The new value for IDENTIFIANT_SURVEIL
-   * @param NBR_QUESTIONS The new value for NBR_QUESTIONS
-   * @param LNG_SURVEIL The new value for LNG_SURVEIL
-   * @param MSG_ACCEUIL The new value for MSG_ACCEUIL
-   * @param MSG_CONCLUSION The new value for MSG_CONCLUSION
-   * @param IDENTIFIANT_QX1 The new value for IDENTIFIANT_QX1
-   * @param NBR_CHOIX_Q1 The new value for NBR_CHOIX_Q1
-   * @param IDENTIFIANT_QX2 The new value for IDENTIFIANT_QX2
-   * @param NBR_CHOIX_Q2 The new value for NBR_CHOIX_Q2
-   * @param IDENTIFIANT_QX3 The new value for IDENTIFIANT_QX3
-   * @param NBR_CHOIX_Q3 The new value for NBR_CHOIX_Q3
-   * @param IDENTIFIANT_QX4 The new value for IDENTIFIANT_QX4
-   * @param NBR_CHOIX_Q4 The new value for NBR_CHOIX_Q4
-   * @param IDENTIFIANT_QX5 The new value for IDENTIFIANT_QX5
-   * @param NBR_CHOIX_Q5 The new value for NBR_CHOIX_Q5
-   * @param IDENTIFIANT_QX6 The new value for IDENTIFIANT_QX6
-   * @param NBR_CHOIX_Q6 The new value for NBR_CHOIX_Q6
-   * @param IDENTIFIANT_QX7 The new value for IDENTIFIANT_QX7
-   * @param NBR_CHOIX_Q7 The new value for NBR_CHOIX_Q7
-   * @param externalDataReference The new value for externalDataReference
-   * @param recipientEmail The new value for recipientEmail
-   * @param distributionChannel The new value for distributionChannel
-   * @param XMContactID The new value for XMContactID
-   * @param canal_interaction_client The new value for canal_interaction_client
-   * @param code_distributeur The new value for code_distributeur
-   * @param code_pdv The new value for code_pdv
-   * @param id_commande The new value for id_commande
-   * @param id_action The new value for id_action
-   * @param id_demande_identification The new value for id_demande_identification
-   * @param id_demande_resiliation The new value for id_demande_resiliation
-   * @param id_case The new value for id_case
-   * @param id_user_interaction The new value for id_user_interaction
-   * @param statut_case The new value for statut_case
-   * @param interaction_client The new value for interaction_client
-   * @param numero_appelant The new value for numero_appelant
-   * @param numero_client The new value for numero_client
-   * @param numero_contact_client The new value for numero_contact_client
-   * @param offre The new value for offre
-   * @param ville_partenaire The new value for ville_partenaire
-   * @param prestataire The new value for prestataire
-   * @param id_profil The new value for id_profil
-   * @param source_contact The new value for source_contact
-   * @param type_interaction_crm The new value for type_interaction_crm
-   * @param type_offre The new value for type_offre
-   * @param date_interaction_crm The new value for date_interaction_crm
-   * @param id_client The new value for id_client
-   * @param region_partenaire The new value for region_partenaire
-   * @param ancienete_ligne The new value for ancienete_ligne
-   * @param login_rvr The new value for login_rvr
+   * @param orderId The new value for orderId
+   * @param customerId The new value for customerId
+   * @param orderDate The new value for orderDate
+   * @param shippingAddress The new value for shippingAddress
+   * @param billingAddress The new value for billingAddress
+   * @param orderStatus The new value for orderStatus
+   * @param paymentMethod The new value for paymentMethod
+   * @param totalAmount The new value for totalAmount
+   * @param currency The new value for currency
+   * @param productId_1 The new value for productId_1
+   * @param productName_1 The new value for productName_1
+   * @param quantity_1 The new value for quantity_1
+   * @param price_1 The new value for price_1
+   * @param productId_2 The new value for productId_2
+   * @param productName_2 The new value for productName_2
+   * @param quantity_2 The new value for quantity_2
+   * @param price_2 The new value for price_2
+   * @param productId_3 The new value for productId_3
+   * @param productName_3 The new value for productName_3
+   * @param quantity_3 The new value for quantity_3
+   * @param price_3 The new value for price_3
    */
-  public Order(java.lang.CharSequence GSW_PHONE, java.lang.CharSequence GSW_AGENT_REQ_TYPE, java.lang.CharSequence GSW_CALLING_LIST, java.lang.CharSequence GSW_TZ_NAME, java.lang.CharSequence GSW_CAMPAIGN_NAME, java.lang.CharSequence GSW_FROM, java.lang.CharSequence GSW_UNTIL, java.lang.CharSequence IDENTIFIANT_SURVEIL, java.lang.CharSequence NBR_QUESTIONS, java.lang.CharSequence LNG_SURVEIL, java.lang.CharSequence MSG_ACCEUIL, java.lang.CharSequence MSG_CONCLUSION, java.lang.CharSequence IDENTIFIANT_QX1, java.lang.CharSequence NBR_CHOIX_Q1, java.lang.CharSequence IDENTIFIANT_QX2, java.lang.CharSequence NBR_CHOIX_Q2, java.lang.CharSequence IDENTIFIANT_QX3, java.lang.CharSequence NBR_CHOIX_Q3, java.lang.CharSequence IDENTIFIANT_QX4, java.lang.CharSequence NBR_CHOIX_Q4, java.lang.CharSequence IDENTIFIANT_QX5, java.lang.CharSequence NBR_CHOIX_Q5, java.lang.CharSequence IDENTIFIANT_QX6, java.lang.CharSequence NBR_CHOIX_Q6, java.lang.CharSequence IDENTIFIANT_QX7, java.lang.CharSequence NBR_CHOIX_Q7, java.lang.CharSequence externalDataReference, java.lang.CharSequence recipientEmail, java.lang.CharSequence distributionChannel, java.lang.CharSequence XMContactID, java.lang.CharSequence canal_interaction_client, java.lang.CharSequence code_distributeur, java.lang.CharSequence code_pdv, java.lang.CharSequence id_commande, java.lang.CharSequence id_action, java.lang.CharSequence id_demande_identification, java.lang.CharSequence id_demande_resiliation, java.lang.CharSequence id_case, java.lang.CharSequence id_user_interaction, java.lang.CharSequence statut_case, java.lang.CharSequence interaction_client, java.lang.CharSequence numero_appelant, java.lang.CharSequence numero_client, java.lang.CharSequence numero_contact_client, java.lang.CharSequence offre, java.lang.CharSequence ville_partenaire, java.lang.CharSequence prestataire, java.lang.CharSequence id_profil, java.lang.CharSequence source_contact, java.lang.CharSequence type_interaction_crm, java.lang.CharSequence type_offre, java.lang.CharSequence date_interaction_crm, java.lang.CharSequence id_client, java.lang.CharSequence region_partenaire, java.lang.CharSequence ancienete_ligne, java.lang.CharSequence login_rvr) {
-    this.GSW_PHONE = GSW_PHONE;
-    this.GSW_AGENT_REQ_TYPE = GSW_AGENT_REQ_TYPE;
-    this.GSW_CALLING_LIST = GSW_CALLING_LIST;
-    this.GSW_TZ_NAME = GSW_TZ_NAME;
-    this.GSW_CAMPAIGN_NAME = GSW_CAMPAIGN_NAME;
-    this.GSW_FROM = GSW_FROM;
-    this.GSW_UNTIL = GSW_UNTIL;
-    this.IDENTIFIANT_SURVEIL = IDENTIFIANT_SURVEIL;
-    this.NBR_QUESTIONS = NBR_QUESTIONS;
-    this.LNG_SURVEIL = LNG_SURVEIL;
-    this.MSG_ACCEUIL = MSG_ACCEUIL;
-    this.MSG_CONCLUSION = MSG_CONCLUSION;
-    this.IDENTIFIANT_QX1 = IDENTIFIANT_QX1;
-    this.NBR_CHOIX_Q1 = NBR_CHOIX_Q1;
-    this.IDENTIFIANT_QX2 = IDENTIFIANT_QX2;
-    this.NBR_CHOIX_Q2 = NBR_CHOIX_Q2;
-    this.IDENTIFIANT_QX3 = IDENTIFIANT_QX3;
-    this.NBR_CHOIX_Q3 = NBR_CHOIX_Q3;
-    this.IDENTIFIANT_QX4 = IDENTIFIANT_QX4;
-    this.NBR_CHOIX_Q4 = NBR_CHOIX_Q4;
-    this.IDENTIFIANT_QX5 = IDENTIFIANT_QX5;
-    this.NBR_CHOIX_Q5 = NBR_CHOIX_Q5;
-    this.IDENTIFIANT_QX6 = IDENTIFIANT_QX6;
-    this.NBR_CHOIX_Q6 = NBR_CHOIX_Q6;
-    this.IDENTIFIANT_QX7 = IDENTIFIANT_QX7;
-    this.NBR_CHOIX_Q7 = NBR_CHOIX_Q7;
-    this.externalDataReference = externalDataReference;
-    this.recipientEmail = recipientEmail;
-    this.distributionChannel = distributionChannel;
-    this.XMContactID = XMContactID;
-    this.canal_interaction_client = canal_interaction_client;
-    this.code_distributeur = code_distributeur;
-    this.code_pdv = code_pdv;
-    this.id_commande = id_commande;
-    this.id_action = id_action;
-    this.id_demande_identification = id_demande_identification;
-    this.id_demande_resiliation = id_demande_resiliation;
-    this.id_case = id_case;
-    this.id_user_interaction = id_user_interaction;
-    this.statut_case = statut_case;
-    this.interaction_client = interaction_client;
-    this.numero_appelant = numero_appelant;
-    this.numero_client = numero_client;
-    this.numero_contact_client = numero_contact_client;
-    this.offre = offre;
-    this.ville_partenaire = ville_partenaire;
-    this.prestataire = prestataire;
-    this.id_profil = id_profil;
-    this.source_contact = source_contact;
-    this.type_interaction_crm = type_interaction_crm;
-    this.type_offre = type_offre;
-    this.date_interaction_crm = date_interaction_crm;
-    this.id_client = id_client;
-    this.region_partenaire = region_partenaire;
-    this.ancienete_ligne = ancienete_ligne;
-    this.login_rvr = login_rvr;
+  public Order(java.lang.CharSequence orderId, java.lang.CharSequence customerId, java.lang.CharSequence orderDate, java.lang.CharSequence shippingAddress, java.lang.CharSequence billingAddress, java.lang.CharSequence orderStatus, java.lang.CharSequence paymentMethod, java.lang.CharSequence totalAmount, java.lang.CharSequence currency, java.lang.CharSequence productId_1, java.lang.CharSequence productName_1, java.lang.CharSequence quantity_1, java.lang.CharSequence price_1, java.lang.CharSequence productId_2, java.lang.CharSequence productName_2, java.lang.CharSequence quantity_2, java.lang.CharSequence price_2, java.lang.CharSequence productId_3, java.lang.CharSequence productName_3, java.lang.CharSequence quantity_3, java.lang.CharSequence price_3) {
+    this.orderId = orderId;
+    this.customerId = customerId;
+    this.orderDate = orderDate;
+    this.shippingAddress = shippingAddress;
+    this.billingAddress = billingAddress;
+    this.orderStatus = orderStatus;
+    this.paymentMethod = paymentMethod;
+    this.totalAmount = totalAmount;
+    this.currency = currency;
+    this.productId_1 = productId_1;
+    this.productName_1 = productName_1;
+    this.quantity_1 = quantity_1;
+    this.price_1 = price_1;
+    this.productId_2 = productId_2;
+    this.productName_2 = productName_2;
+    this.quantity_2 = quantity_2;
+    this.price_2 = price_2;
+    this.productId_3 = productId_3;
+    this.productName_3 = productName_3;
+    this.quantity_3 = quantity_3;
+    this.price_3 = price_3;
   }
 
   public org.apache.avro.Schema getSchema() { return SCHEMA$; }
   // Used by DatumWriter.  Applications should not call.
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return GSW_PHONE;
-    case 1: return GSW_AGENT_REQ_TYPE;
-    case 2: return GSW_CALLING_LIST;
-    case 3: return GSW_TZ_NAME;
-    case 4: return GSW_CAMPAIGN_NAME;
-    case 5: return GSW_FROM;
-    case 6: return GSW_UNTIL;
-    case 7: return IDENTIFIANT_SURVEIL;
-    case 8: return NBR_QUESTIONS;
-    case 9: return LNG_SURVEIL;
-    case 10: return MSG_ACCEUIL;
-    case 11: return MSG_CONCLUSION;
-    case 12: return IDENTIFIANT_QX1;
-    case 13: return NBR_CHOIX_Q1;
-    case 14: return IDENTIFIANT_QX2;
-    case 15: return NBR_CHOIX_Q2;
-    case 16: return IDENTIFIANT_QX3;
-    case 17: return NBR_CHOIX_Q3;
-    case 18: return IDENTIFIANT_QX4;
-    case 19: return NBR_CHOIX_Q4;
-    case 20: return IDENTIFIANT_QX5;
-    case 21: return NBR_CHOIX_Q5;
-    case 22: return IDENTIFIANT_QX6;
-    case 23: return NBR_CHOIX_Q6;
-    case 24: return IDENTIFIANT_QX7;
-    case 25: return NBR_CHOIX_Q7;
-    case 26: return externalDataReference;
-    case 27: return recipientEmail;
-    case 28: return distributionChannel;
-    case 29: return XMContactID;
-    case 30: return canal_interaction_client;
-    case 31: return code_distributeur;
-    case 32: return code_pdv;
-    case 33: return id_commande;
-    case 34: return id_action;
-    case 35: return id_demande_identification;
-    case 36: return id_demande_resiliation;
-    case 37: return id_case;
-    case 38: return id_user_interaction;
-    case 39: return statut_case;
-    case 40: return interaction_client;
-    case 41: return numero_appelant;
-    case 42: return numero_client;
-    case 43: return numero_contact_client;
-    case 44: return offre;
-    case 45: return ville_partenaire;
-    case 46: return prestataire;
-    case 47: return id_profil;
-    case 48: return source_contact;
-    case 49: return type_interaction_crm;
-    case 50: return type_offre;
-    case 51: return date_interaction_crm;
-    case 52: return id_client;
-    case 53: return region_partenaire;
-    case 54: return ancienete_ligne;
-    case 55: return login_rvr;
+    case 0: return orderId;
+    case 1: return customerId;
+    case 2: return orderDate;
+    case 3: return shippingAddress;
+    case 4: return billingAddress;
+    case 5: return orderStatus;
+    case 6: return paymentMethod;
+    case 7: return totalAmount;
+    case 8: return currency;
+    case 9: return productId_1;
+    case 10: return productName_1;
+    case 11: return quantity_1;
+    case 12: return price_1;
+    case 13: return productId_2;
+    case 14: return productName_2;
+    case 15: return quantity_2;
+    case 16: return price_2;
+    case 17: return productId_3;
+    case 18: return productName_3;
+    case 19: return quantity_3;
+    case 20: return price_3;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -301,1050 +161,420 @@ public class Order extends org.apache.avro.specific.SpecificRecordBase implement
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: GSW_PHONE = (java.lang.CharSequence)value$; break;
-    case 1: GSW_AGENT_REQ_TYPE = (java.lang.CharSequence)value$; break;
-    case 2: GSW_CALLING_LIST = (java.lang.CharSequence)value$; break;
-    case 3: GSW_TZ_NAME = (java.lang.CharSequence)value$; break;
-    case 4: GSW_CAMPAIGN_NAME = (java.lang.CharSequence)value$; break;
-    case 5: GSW_FROM = (java.lang.CharSequence)value$; break;
-    case 6: GSW_UNTIL = (java.lang.CharSequence)value$; break;
-    case 7: IDENTIFIANT_SURVEIL = (java.lang.CharSequence)value$; break;
-    case 8: NBR_QUESTIONS = (java.lang.CharSequence)value$; break;
-    case 9: LNG_SURVEIL = (java.lang.CharSequence)value$; break;
-    case 10: MSG_ACCEUIL = (java.lang.CharSequence)value$; break;
-    case 11: MSG_CONCLUSION = (java.lang.CharSequence)value$; break;
-    case 12: IDENTIFIANT_QX1 = (java.lang.CharSequence)value$; break;
-    case 13: NBR_CHOIX_Q1 = (java.lang.CharSequence)value$; break;
-    case 14: IDENTIFIANT_QX2 = (java.lang.CharSequence)value$; break;
-    case 15: NBR_CHOIX_Q2 = (java.lang.CharSequence)value$; break;
-    case 16: IDENTIFIANT_QX3 = (java.lang.CharSequence)value$; break;
-    case 17: NBR_CHOIX_Q3 = (java.lang.CharSequence)value$; break;
-    case 18: IDENTIFIANT_QX4 = (java.lang.CharSequence)value$; break;
-    case 19: NBR_CHOIX_Q4 = (java.lang.CharSequence)value$; break;
-    case 20: IDENTIFIANT_QX5 = (java.lang.CharSequence)value$; break;
-    case 21: NBR_CHOIX_Q5 = (java.lang.CharSequence)value$; break;
-    case 22: IDENTIFIANT_QX6 = (java.lang.CharSequence)value$; break;
-    case 23: NBR_CHOIX_Q6 = (java.lang.CharSequence)value$; break;
-    case 24: IDENTIFIANT_QX7 = (java.lang.CharSequence)value$; break;
-    case 25: NBR_CHOIX_Q7 = (java.lang.CharSequence)value$; break;
-    case 26: externalDataReference = (java.lang.CharSequence)value$; break;
-    case 27: recipientEmail = (java.lang.CharSequence)value$; break;
-    case 28: distributionChannel = (java.lang.CharSequence)value$; break;
-    case 29: XMContactID = (java.lang.CharSequence)value$; break;
-    case 30: canal_interaction_client = (java.lang.CharSequence)value$; break;
-    case 31: code_distributeur = (java.lang.CharSequence)value$; break;
-    case 32: code_pdv = (java.lang.CharSequence)value$; break;
-    case 33: id_commande = (java.lang.CharSequence)value$; break;
-    case 34: id_action = (java.lang.CharSequence)value$; break;
-    case 35: id_demande_identification = (java.lang.CharSequence)value$; break;
-    case 36: id_demande_resiliation = (java.lang.CharSequence)value$; break;
-    case 37: id_case = (java.lang.CharSequence)value$; break;
-    case 38: id_user_interaction = (java.lang.CharSequence)value$; break;
-    case 39: statut_case = (java.lang.CharSequence)value$; break;
-    case 40: interaction_client = (java.lang.CharSequence)value$; break;
-    case 41: numero_appelant = (java.lang.CharSequence)value$; break;
-    case 42: numero_client = (java.lang.CharSequence)value$; break;
-    case 43: numero_contact_client = (java.lang.CharSequence)value$; break;
-    case 44: offre = (java.lang.CharSequence)value$; break;
-    case 45: ville_partenaire = (java.lang.CharSequence)value$; break;
-    case 46: prestataire = (java.lang.CharSequence)value$; break;
-    case 47: id_profil = (java.lang.CharSequence)value$; break;
-    case 48: source_contact = (java.lang.CharSequence)value$; break;
-    case 49: type_interaction_crm = (java.lang.CharSequence)value$; break;
-    case 50: type_offre = (java.lang.CharSequence)value$; break;
-    case 51: date_interaction_crm = (java.lang.CharSequence)value$; break;
-    case 52: id_client = (java.lang.CharSequence)value$; break;
-    case 53: region_partenaire = (java.lang.CharSequence)value$; break;
-    case 54: ancienete_ligne = (java.lang.CharSequence)value$; break;
-    case 55: login_rvr = (java.lang.CharSequence)value$; break;
+    case 0: orderId = (java.lang.CharSequence)value$; break;
+    case 1: customerId = (java.lang.CharSequence)value$; break;
+    case 2: orderDate = (java.lang.CharSequence)value$; break;
+    case 3: shippingAddress = (java.lang.CharSequence)value$; break;
+    case 4: billingAddress = (java.lang.CharSequence)value$; break;
+    case 5: orderStatus = (java.lang.CharSequence)value$; break;
+    case 6: paymentMethod = (java.lang.CharSequence)value$; break;
+    case 7: totalAmount = (java.lang.CharSequence)value$; break;
+    case 8: currency = (java.lang.CharSequence)value$; break;
+    case 9: productId_1 = (java.lang.CharSequence)value$; break;
+    case 10: productName_1 = (java.lang.CharSequence)value$; break;
+    case 11: quantity_1 = (java.lang.CharSequence)value$; break;
+    case 12: price_1 = (java.lang.CharSequence)value$; break;
+    case 13: productId_2 = (java.lang.CharSequence)value$; break;
+    case 14: productName_2 = (java.lang.CharSequence)value$; break;
+    case 15: quantity_2 = (java.lang.CharSequence)value$; break;
+    case 16: price_2 = (java.lang.CharSequence)value$; break;
+    case 17: productId_3 = (java.lang.CharSequence)value$; break;
+    case 18: productName_3 = (java.lang.CharSequence)value$; break;
+    case 19: quantity_3 = (java.lang.CharSequence)value$; break;
+    case 20: price_3 = (java.lang.CharSequence)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
 
   /**
-   * Gets the value of the 'GSW_PHONE' field.
-   * @return The value of the 'GSW_PHONE' field.
+   * Gets the value of the 'orderId' field.
+   * @return The value of the 'orderId' field.
    */
-  public java.lang.CharSequence getGSWPHONE() {
-    return GSW_PHONE;
+  public java.lang.CharSequence getOrderId() {
+    return orderId;
   }
 
   /**
-   * Sets the value of the 'GSW_PHONE' field.
+   * Sets the value of the 'orderId' field.
    * @param value the value to set.
    */
-  public void setGSWPHONE(java.lang.CharSequence value) {
-    this.GSW_PHONE = value;
+  public void setOrderId(java.lang.CharSequence value) {
+    this.orderId = value;
   }
 
   /**
-   * Gets the value of the 'GSW_AGENT_REQ_TYPE' field.
-   * @return The value of the 'GSW_AGENT_REQ_TYPE' field.
+   * Gets the value of the 'customerId' field.
+   * @return The value of the 'customerId' field.
    */
-  public java.lang.CharSequence getGSWAGENTREQTYPE() {
-    return GSW_AGENT_REQ_TYPE;
+  public java.lang.CharSequence getCustomerId() {
+    return customerId;
   }
 
   /**
-   * Sets the value of the 'GSW_AGENT_REQ_TYPE' field.
+   * Sets the value of the 'customerId' field.
    * @param value the value to set.
    */
-  public void setGSWAGENTREQTYPE(java.lang.CharSequence value) {
-    this.GSW_AGENT_REQ_TYPE = value;
+  public void setCustomerId(java.lang.CharSequence value) {
+    this.customerId = value;
   }
 
   /**
-   * Gets the value of the 'GSW_CALLING_LIST' field.
-   * @return The value of the 'GSW_CALLING_LIST' field.
+   * Gets the value of the 'orderDate' field.
+   * @return The value of the 'orderDate' field.
    */
-  public java.lang.CharSequence getGSWCALLINGLIST() {
-    return GSW_CALLING_LIST;
+  public java.lang.CharSequence getOrderDate() {
+    return orderDate;
   }
 
   /**
-   * Sets the value of the 'GSW_CALLING_LIST' field.
+   * Sets the value of the 'orderDate' field.
    * @param value the value to set.
    */
-  public void setGSWCALLINGLIST(java.lang.CharSequence value) {
-    this.GSW_CALLING_LIST = value;
+  public void setOrderDate(java.lang.CharSequence value) {
+    this.orderDate = value;
   }
 
   /**
-   * Gets the value of the 'GSW_TZ_NAME' field.
-   * @return The value of the 'GSW_TZ_NAME' field.
+   * Gets the value of the 'shippingAddress' field.
+   * @return The value of the 'shippingAddress' field.
    */
-  public java.lang.CharSequence getGSWTZNAME() {
-    return GSW_TZ_NAME;
+  public java.lang.CharSequence getShippingAddress() {
+    return shippingAddress;
   }
 
   /**
-   * Sets the value of the 'GSW_TZ_NAME' field.
+   * Sets the value of the 'shippingAddress' field.
    * @param value the value to set.
    */
-  public void setGSWTZNAME(java.lang.CharSequence value) {
-    this.GSW_TZ_NAME = value;
+  public void setShippingAddress(java.lang.CharSequence value) {
+    this.shippingAddress = value;
   }
 
   /**
-   * Gets the value of the 'GSW_CAMPAIGN_NAME' field.
-   * @return The value of the 'GSW_CAMPAIGN_NAME' field.
+   * Gets the value of the 'billingAddress' field.
+   * @return The value of the 'billingAddress' field.
    */
-  public java.lang.CharSequence getGSWCAMPAIGNNAME() {
-    return GSW_CAMPAIGN_NAME;
+  public java.lang.CharSequence getBillingAddress() {
+    return billingAddress;
   }
 
   /**
-   * Sets the value of the 'GSW_CAMPAIGN_NAME' field.
+   * Sets the value of the 'billingAddress' field.
    * @param value the value to set.
    */
-  public void setGSWCAMPAIGNNAME(java.lang.CharSequence value) {
-    this.GSW_CAMPAIGN_NAME = value;
+  public void setBillingAddress(java.lang.CharSequence value) {
+    this.billingAddress = value;
   }
 
   /**
-   * Gets the value of the 'GSW_FROM' field.
-   * @return The value of the 'GSW_FROM' field.
+   * Gets the value of the 'orderStatus' field.
+   * @return The value of the 'orderStatus' field.
    */
-  public java.lang.CharSequence getGSWFROM() {
-    return GSW_FROM;
+  public java.lang.CharSequence getOrderStatus() {
+    return orderStatus;
   }
 
   /**
-   * Sets the value of the 'GSW_FROM' field.
+   * Sets the value of the 'orderStatus' field.
    * @param value the value to set.
    */
-  public void setGSWFROM(java.lang.CharSequence value) {
-    this.GSW_FROM = value;
+  public void setOrderStatus(java.lang.CharSequence value) {
+    this.orderStatus = value;
   }
 
   /**
-   * Gets the value of the 'GSW_UNTIL' field.
-   * @return The value of the 'GSW_UNTIL' field.
+   * Gets the value of the 'paymentMethod' field.
+   * @return The value of the 'paymentMethod' field.
    */
-  public java.lang.CharSequence getGSWUNTIL() {
-    return GSW_UNTIL;
+  public java.lang.CharSequence getPaymentMethod() {
+    return paymentMethod;
   }
 
   /**
-   * Sets the value of the 'GSW_UNTIL' field.
+   * Sets the value of the 'paymentMethod' field.
    * @param value the value to set.
    */
-  public void setGSWUNTIL(java.lang.CharSequence value) {
-    this.GSW_UNTIL = value;
+  public void setPaymentMethod(java.lang.CharSequence value) {
+    this.paymentMethod = value;
   }
 
   /**
-   * Gets the value of the 'IDENTIFIANT_SURVEIL' field.
-   * @return The value of the 'IDENTIFIANT_SURVEIL' field.
+   * Gets the value of the 'totalAmount' field.
+   * @return The value of the 'totalAmount' field.
    */
-  public java.lang.CharSequence getIDENTIFIANTSURVEIL() {
-    return IDENTIFIANT_SURVEIL;
+  public java.lang.CharSequence getTotalAmount() {
+    return totalAmount;
   }
 
   /**
-   * Sets the value of the 'IDENTIFIANT_SURVEIL' field.
+   * Sets the value of the 'totalAmount' field.
    * @param value the value to set.
    */
-  public void setIDENTIFIANTSURVEIL(java.lang.CharSequence value) {
-    this.IDENTIFIANT_SURVEIL = value;
+  public void setTotalAmount(java.lang.CharSequence value) {
+    this.totalAmount = value;
   }
 
   /**
-   * Gets the value of the 'NBR_QUESTIONS' field.
-   * @return The value of the 'NBR_QUESTIONS' field.
+   * Gets the value of the 'currency' field.
+   * @return The value of the 'currency' field.
    */
-  public java.lang.CharSequence getNBRQUESTIONS() {
-    return NBR_QUESTIONS;
+  public java.lang.CharSequence getCurrency() {
+    return currency;
   }
 
   /**
-   * Sets the value of the 'NBR_QUESTIONS' field.
+   * Sets the value of the 'currency' field.
    * @param value the value to set.
    */
-  public void setNBRQUESTIONS(java.lang.CharSequence value) {
-    this.NBR_QUESTIONS = value;
+  public void setCurrency(java.lang.CharSequence value) {
+    this.currency = value;
   }
 
   /**
-   * Gets the value of the 'LNG_SURVEIL' field.
-   * @return The value of the 'LNG_SURVEIL' field.
+   * Gets the value of the 'productId_1' field.
+   * @return The value of the 'productId_1' field.
    */
-  public java.lang.CharSequence getLNGSURVEIL() {
-    return LNG_SURVEIL;
+  public java.lang.CharSequence getProductId1() {
+    return productId_1;
   }
 
   /**
-   * Sets the value of the 'LNG_SURVEIL' field.
+   * Sets the value of the 'productId_1' field.
    * @param value the value to set.
    */
-  public void setLNGSURVEIL(java.lang.CharSequence value) {
-    this.LNG_SURVEIL = value;
+  public void setProductId1(java.lang.CharSequence value) {
+    this.productId_1 = value;
   }
 
   /**
-   * Gets the value of the 'MSG_ACCEUIL' field.
-   * @return The value of the 'MSG_ACCEUIL' field.
+   * Gets the value of the 'productName_1' field.
+   * @return The value of the 'productName_1' field.
    */
-  public java.lang.CharSequence getMSGACCEUIL() {
-    return MSG_ACCEUIL;
+  public java.lang.CharSequence getProductName1() {
+    return productName_1;
   }
 
   /**
-   * Sets the value of the 'MSG_ACCEUIL' field.
+   * Sets the value of the 'productName_1' field.
    * @param value the value to set.
    */
-  public void setMSGACCEUIL(java.lang.CharSequence value) {
-    this.MSG_ACCEUIL = value;
+  public void setProductName1(java.lang.CharSequence value) {
+    this.productName_1 = value;
   }
 
   /**
-   * Gets the value of the 'MSG_CONCLUSION' field.
-   * @return The value of the 'MSG_CONCLUSION' field.
+   * Gets the value of the 'quantity_1' field.
+   * @return The value of the 'quantity_1' field.
    */
-  public java.lang.CharSequence getMSGCONCLUSION() {
-    return MSG_CONCLUSION;
+  public java.lang.CharSequence getQuantity1() {
+    return quantity_1;
   }
 
   /**
-   * Sets the value of the 'MSG_CONCLUSION' field.
+   * Sets the value of the 'quantity_1' field.
    * @param value the value to set.
    */
-  public void setMSGCONCLUSION(java.lang.CharSequence value) {
-    this.MSG_CONCLUSION = value;
+  public void setQuantity1(java.lang.CharSequence value) {
+    this.quantity_1 = value;
   }
 
   /**
-   * Gets the value of the 'IDENTIFIANT_QX1' field.
-   * @return The value of the 'IDENTIFIANT_QX1' field.
+   * Gets the value of the 'price_1' field.
+   * @return The value of the 'price_1' field.
    */
-  public java.lang.CharSequence getIDENTIFIANTQX1() {
-    return IDENTIFIANT_QX1;
+  public java.lang.CharSequence getPrice1() {
+    return price_1;
   }
 
   /**
-   * Sets the value of the 'IDENTIFIANT_QX1' field.
+   * Sets the value of the 'price_1' field.
    * @param value the value to set.
    */
-  public void setIDENTIFIANTQX1(java.lang.CharSequence value) {
-    this.IDENTIFIANT_QX1 = value;
+  public void setPrice1(java.lang.CharSequence value) {
+    this.price_1 = value;
   }
 
   /**
-   * Gets the value of the 'NBR_CHOIX_Q1' field.
-   * @return The value of the 'NBR_CHOIX_Q1' field.
+   * Gets the value of the 'productId_2' field.
+   * @return The value of the 'productId_2' field.
    */
-  public java.lang.CharSequence getNBRCHOIXQ1() {
-    return NBR_CHOIX_Q1;
+  public java.lang.CharSequence getProductId2() {
+    return productId_2;
   }
 
   /**
-   * Sets the value of the 'NBR_CHOIX_Q1' field.
+   * Sets the value of the 'productId_2' field.
    * @param value the value to set.
    */
-  public void setNBRCHOIXQ1(java.lang.CharSequence value) {
-    this.NBR_CHOIX_Q1 = value;
+  public void setProductId2(java.lang.CharSequence value) {
+    this.productId_2 = value;
   }
 
   /**
-   * Gets the value of the 'IDENTIFIANT_QX2' field.
-   * @return The value of the 'IDENTIFIANT_QX2' field.
+   * Gets the value of the 'productName_2' field.
+   * @return The value of the 'productName_2' field.
    */
-  public java.lang.CharSequence getIDENTIFIANTQX2() {
-    return IDENTIFIANT_QX2;
+  public java.lang.CharSequence getProductName2() {
+    return productName_2;
   }
 
   /**
-   * Sets the value of the 'IDENTIFIANT_QX2' field.
+   * Sets the value of the 'productName_2' field.
    * @param value the value to set.
    */
-  public void setIDENTIFIANTQX2(java.lang.CharSequence value) {
-    this.IDENTIFIANT_QX2 = value;
+  public void setProductName2(java.lang.CharSequence value) {
+    this.productName_2 = value;
   }
 
   /**
-   * Gets the value of the 'NBR_CHOIX_Q2' field.
-   * @return The value of the 'NBR_CHOIX_Q2' field.
+   * Gets the value of the 'quantity_2' field.
+   * @return The value of the 'quantity_2' field.
    */
-  public java.lang.CharSequence getNBRCHOIXQ2() {
-    return NBR_CHOIX_Q2;
+  public java.lang.CharSequence getQuantity2() {
+    return quantity_2;
   }
 
   /**
-   * Sets the value of the 'NBR_CHOIX_Q2' field.
+   * Sets the value of the 'quantity_2' field.
    * @param value the value to set.
    */
-  public void setNBRCHOIXQ2(java.lang.CharSequence value) {
-    this.NBR_CHOIX_Q2 = value;
+  public void setQuantity2(java.lang.CharSequence value) {
+    this.quantity_2 = value;
   }
 
   /**
-   * Gets the value of the 'IDENTIFIANT_QX3' field.
-   * @return The value of the 'IDENTIFIANT_QX3' field.
+   * Gets the value of the 'price_2' field.
+   * @return The value of the 'price_2' field.
    */
-  public java.lang.CharSequence getIDENTIFIANTQX3() {
-    return IDENTIFIANT_QX3;
+  public java.lang.CharSequence getPrice2() {
+    return price_2;
   }
 
   /**
-   * Sets the value of the 'IDENTIFIANT_QX3' field.
+   * Sets the value of the 'price_2' field.
    * @param value the value to set.
    */
-  public void setIDENTIFIANTQX3(java.lang.CharSequence value) {
-    this.IDENTIFIANT_QX3 = value;
+  public void setPrice2(java.lang.CharSequence value) {
+    this.price_2 = value;
   }
 
   /**
-   * Gets the value of the 'NBR_CHOIX_Q3' field.
-   * @return The value of the 'NBR_CHOIX_Q3' field.
+   * Gets the value of the 'productId_3' field.
+   * @return The value of the 'productId_3' field.
    */
-  public java.lang.CharSequence getNBRCHOIXQ3() {
-    return NBR_CHOIX_Q3;
+  public java.lang.CharSequence getProductId3() {
+    return productId_3;
   }
 
   /**
-   * Sets the value of the 'NBR_CHOIX_Q3' field.
+   * Sets the value of the 'productId_3' field.
    * @param value the value to set.
    */
-  public void setNBRCHOIXQ3(java.lang.CharSequence value) {
-    this.NBR_CHOIX_Q3 = value;
+  public void setProductId3(java.lang.CharSequence value) {
+    this.productId_3 = value;
   }
 
   /**
-   * Gets the value of the 'IDENTIFIANT_QX4' field.
-   * @return The value of the 'IDENTIFIANT_QX4' field.
+   * Gets the value of the 'productName_3' field.
+   * @return The value of the 'productName_3' field.
    */
-  public java.lang.CharSequence getIDENTIFIANTQX4() {
-    return IDENTIFIANT_QX4;
+  public java.lang.CharSequence getProductName3() {
+    return productName_3;
   }
 
   /**
-   * Sets the value of the 'IDENTIFIANT_QX4' field.
+   * Sets the value of the 'productName_3' field.
    * @param value the value to set.
    */
-  public void setIDENTIFIANTQX4(java.lang.CharSequence value) {
-    this.IDENTIFIANT_QX4 = value;
+  public void setProductName3(java.lang.CharSequence value) {
+    this.productName_3 = value;
   }
 
   /**
-   * Gets the value of the 'NBR_CHOIX_Q4' field.
-   * @return The value of the 'NBR_CHOIX_Q4' field.
+   * Gets the value of the 'quantity_3' field.
+   * @return The value of the 'quantity_3' field.
    */
-  public java.lang.CharSequence getNBRCHOIXQ4() {
-    return NBR_CHOIX_Q4;
+  public java.lang.CharSequence getQuantity3() {
+    return quantity_3;
   }
 
   /**
-   * Sets the value of the 'NBR_CHOIX_Q4' field.
+   * Sets the value of the 'quantity_3' field.
    * @param value the value to set.
    */
-  public void setNBRCHOIXQ4(java.lang.CharSequence value) {
-    this.NBR_CHOIX_Q4 = value;
+  public void setQuantity3(java.lang.CharSequence value) {
+    this.quantity_3 = value;
   }
 
   /**
-   * Gets the value of the 'IDENTIFIANT_QX5' field.
-   * @return The value of the 'IDENTIFIANT_QX5' field.
+   * Gets the value of the 'price_3' field.
+   * @return The value of the 'price_3' field.
    */
-  public java.lang.CharSequence getIDENTIFIANTQX5() {
-    return IDENTIFIANT_QX5;
+  public java.lang.CharSequence getPrice3() {
+    return price_3;
   }
 
   /**
-   * Sets the value of the 'IDENTIFIANT_QX5' field.
+   * Sets the value of the 'price_3' field.
    * @param value the value to set.
    */
-  public void setIDENTIFIANTQX5(java.lang.CharSequence value) {
-    this.IDENTIFIANT_QX5 = value;
+  public void setPrice3(java.lang.CharSequence value) {
+    this.price_3 = value;
   }
 
   /**
-   * Gets the value of the 'NBR_CHOIX_Q5' field.
-   * @return The value of the 'NBR_CHOIX_Q5' field.
+   * Creates a new Order RecordBuilder.
+   * @return A new Order RecordBuilder
    */
-  public java.lang.CharSequence getNBRCHOIXQ5() {
-    return NBR_CHOIX_Q5;
+  public static com.dione.dto.Order.Builder newBuilder() {
+    return new com.dione.dto.Order.Builder();
   }
 
   /**
-   * Sets the value of the 'NBR_CHOIX_Q5' field.
-   * @param value the value to set.
-   */
-  public void setNBRCHOIXQ5(java.lang.CharSequence value) {
-    this.NBR_CHOIX_Q5 = value;
-  }
-
-  /**
-   * Gets the value of the 'IDENTIFIANT_QX6' field.
-   * @return The value of the 'IDENTIFIANT_QX6' field.
-   */
-  public java.lang.CharSequence getIDENTIFIANTQX6() {
-    return IDENTIFIANT_QX6;
-  }
-
-  /**
-   * Sets the value of the 'IDENTIFIANT_QX6' field.
-   * @param value the value to set.
-   */
-  public void setIDENTIFIANTQX6(java.lang.CharSequence value) {
-    this.IDENTIFIANT_QX6 = value;
-  }
-
-  /**
-   * Gets the value of the 'NBR_CHOIX_Q6' field.
-   * @return The value of the 'NBR_CHOIX_Q6' field.
-   */
-  public java.lang.CharSequence getNBRCHOIXQ6() {
-    return NBR_CHOIX_Q6;
-  }
-
-  /**
-   * Sets the value of the 'NBR_CHOIX_Q6' field.
-   * @param value the value to set.
-   */
-  public void setNBRCHOIXQ6(java.lang.CharSequence value) {
-    this.NBR_CHOIX_Q6 = value;
-  }
-
-  /**
-   * Gets the value of the 'IDENTIFIANT_QX7' field.
-   * @return The value of the 'IDENTIFIANT_QX7' field.
-   */
-  public java.lang.CharSequence getIDENTIFIANTQX7() {
-    return IDENTIFIANT_QX7;
-  }
-
-  /**
-   * Sets the value of the 'IDENTIFIANT_QX7' field.
-   * @param value the value to set.
-   */
-  public void setIDENTIFIANTQX7(java.lang.CharSequence value) {
-    this.IDENTIFIANT_QX7 = value;
-  }
-
-  /**
-   * Gets the value of the 'NBR_CHOIX_Q7' field.
-   * @return The value of the 'NBR_CHOIX_Q7' field.
-   */
-  public java.lang.CharSequence getNBRCHOIXQ7() {
-    return NBR_CHOIX_Q7;
-  }
-
-  /**
-   * Sets the value of the 'NBR_CHOIX_Q7' field.
-   * @param value the value to set.
-   */
-  public void setNBRCHOIXQ7(java.lang.CharSequence value) {
-    this.NBR_CHOIX_Q7 = value;
-  }
-
-  /**
-   * Gets the value of the 'externalDataReference' field.
-   * @return The value of the 'externalDataReference' field.
-   */
-  public java.lang.CharSequence getExternalDataReference() {
-    return externalDataReference;
-  }
-
-  /**
-   * Sets the value of the 'externalDataReference' field.
-   * @param value the value to set.
-   */
-  public void setExternalDataReference(java.lang.CharSequence value) {
-    this.externalDataReference = value;
-  }
-
-  /**
-   * Gets the value of the 'recipientEmail' field.
-   * @return The value of the 'recipientEmail' field.
-   */
-  public java.lang.CharSequence getRecipientEmail() {
-    return recipientEmail;
-  }
-
-  /**
-   * Sets the value of the 'recipientEmail' field.
-   * @param value the value to set.
-   */
-  public void setRecipientEmail(java.lang.CharSequence value) {
-    this.recipientEmail = value;
-  }
-
-  /**
-   * Gets the value of the 'distributionChannel' field.
-   * @return The value of the 'distributionChannel' field.
-   */
-  public java.lang.CharSequence getDistributionChannel() {
-    return distributionChannel;
-  }
-
-  /**
-   * Sets the value of the 'distributionChannel' field.
-   * @param value the value to set.
-   */
-  public void setDistributionChannel(java.lang.CharSequence value) {
-    this.distributionChannel = value;
-  }
-
-  /**
-   * Gets the value of the 'XMContactID' field.
-   * @return The value of the 'XMContactID' field.
-   */
-  public java.lang.CharSequence getXMContactID() {
-    return XMContactID;
-  }
-
-  /**
-   * Sets the value of the 'XMContactID' field.
-   * @param value the value to set.
-   */
-  public void setXMContactID(java.lang.CharSequence value) {
-    this.XMContactID = value;
-  }
-
-  /**
-   * Gets the value of the 'canal_interaction_client' field.
-   * @return The value of the 'canal_interaction_client' field.
-   */
-  public java.lang.CharSequence getCanalInteractionClient() {
-    return canal_interaction_client;
-  }
-
-  /**
-   * Sets the value of the 'canal_interaction_client' field.
-   * @param value the value to set.
-   */
-  public void setCanalInteractionClient(java.lang.CharSequence value) {
-    this.canal_interaction_client = value;
-  }
-
-  /**
-   * Gets the value of the 'code_distributeur' field.
-   * @return The value of the 'code_distributeur' field.
-   */
-  public java.lang.CharSequence getCodeDistributeur() {
-    return code_distributeur;
-  }
-
-  /**
-   * Sets the value of the 'code_distributeur' field.
-   * @param value the value to set.
-   */
-  public void setCodeDistributeur(java.lang.CharSequence value) {
-    this.code_distributeur = value;
-  }
-
-  /**
-   * Gets the value of the 'code_pdv' field.
-   * @return The value of the 'code_pdv' field.
-   */
-  public java.lang.CharSequence getCodePdv() {
-    return code_pdv;
-  }
-
-  /**
-   * Sets the value of the 'code_pdv' field.
-   * @param value the value to set.
-   */
-  public void setCodePdv(java.lang.CharSequence value) {
-    this.code_pdv = value;
-  }
-
-  /**
-   * Gets the value of the 'id_commande' field.
-   * @return The value of the 'id_commande' field.
-   */
-  public java.lang.CharSequence getIdCommande() {
-    return id_commande;
-  }
-
-  /**
-   * Sets the value of the 'id_commande' field.
-   * @param value the value to set.
-   */
-  public void setIdCommande(java.lang.CharSequence value) {
-    this.id_commande = value;
-  }
-
-  /**
-   * Gets the value of the 'id_action' field.
-   * @return The value of the 'id_action' field.
-   */
-  public java.lang.CharSequence getIdAction() {
-    return id_action;
-  }
-
-  /**
-   * Sets the value of the 'id_action' field.
-   * @param value the value to set.
-   */
-  public void setIdAction(java.lang.CharSequence value) {
-    this.id_action = value;
-  }
-
-  /**
-   * Gets the value of the 'id_demande_identification' field.
-   * @return The value of the 'id_demande_identification' field.
-   */
-  public java.lang.CharSequence getIdDemandeIdentification() {
-    return id_demande_identification;
-  }
-
-  /**
-   * Sets the value of the 'id_demande_identification' field.
-   * @param value the value to set.
-   */
-  public void setIdDemandeIdentification(java.lang.CharSequence value) {
-    this.id_demande_identification = value;
-  }
-
-  /**
-   * Gets the value of the 'id_demande_resiliation' field.
-   * @return The value of the 'id_demande_resiliation' field.
-   */
-  public java.lang.CharSequence getIdDemandeResiliation() {
-    return id_demande_resiliation;
-  }
-
-  /**
-   * Sets the value of the 'id_demande_resiliation' field.
-   * @param value the value to set.
-   */
-  public void setIdDemandeResiliation(java.lang.CharSequence value) {
-    this.id_demande_resiliation = value;
-  }
-
-  /**
-   * Gets the value of the 'id_case' field.
-   * @return The value of the 'id_case' field.
-   */
-  public java.lang.CharSequence getIdCase() {
-    return id_case;
-  }
-
-  /**
-   * Sets the value of the 'id_case' field.
-   * @param value the value to set.
-   */
-  public void setIdCase(java.lang.CharSequence value) {
-    this.id_case = value;
-  }
-
-  /**
-   * Gets the value of the 'id_user_interaction' field.
-   * @return The value of the 'id_user_interaction' field.
-   */
-  public java.lang.CharSequence getIdUserInteraction() {
-    return id_user_interaction;
-  }
-
-  /**
-   * Sets the value of the 'id_user_interaction' field.
-   * @param value the value to set.
-   */
-  public void setIdUserInteraction(java.lang.CharSequence value) {
-    this.id_user_interaction = value;
-  }
-
-  /**
-   * Gets the value of the 'statut_case' field.
-   * @return The value of the 'statut_case' field.
-   */
-  public java.lang.CharSequence getStatutCase() {
-    return statut_case;
-  }
-
-  /**
-   * Sets the value of the 'statut_case' field.
-   * @param value the value to set.
-   */
-  public void setStatutCase(java.lang.CharSequence value) {
-    this.statut_case = value;
-  }
-
-  /**
-   * Gets the value of the 'interaction_client' field.
-   * @return The value of the 'interaction_client' field.
-   */
-  public java.lang.CharSequence getInteractionClient() {
-    return interaction_client;
-  }
-
-  /**
-   * Sets the value of the 'interaction_client' field.
-   * @param value the value to set.
-   */
-  public void setInteractionClient(java.lang.CharSequence value) {
-    this.interaction_client = value;
-  }
-
-  /**
-   * Gets the value of the 'numero_appelant' field.
-   * @return The value of the 'numero_appelant' field.
-   */
-  public java.lang.CharSequence getNumeroAppelant() {
-    return numero_appelant;
-  }
-
-  /**
-   * Sets the value of the 'numero_appelant' field.
-   * @param value the value to set.
-   */
-  public void setNumeroAppelant(java.lang.CharSequence value) {
-    this.numero_appelant = value;
-  }
-
-  /**
-   * Gets the value of the 'numero_client' field.
-   * @return The value of the 'numero_client' field.
-   */
-  public java.lang.CharSequence getNumeroClient() {
-    return numero_client;
-  }
-
-  /**
-   * Sets the value of the 'numero_client' field.
-   * @param value the value to set.
-   */
-  public void setNumeroClient(java.lang.CharSequence value) {
-    this.numero_client = value;
-  }
-
-  /**
-   * Gets the value of the 'numero_contact_client' field.
-   * @return The value of the 'numero_contact_client' field.
-   */
-  public java.lang.CharSequence getNumeroContactClient() {
-    return numero_contact_client;
-  }
-
-  /**
-   * Sets the value of the 'numero_contact_client' field.
-   * @param value the value to set.
-   */
-  public void setNumeroContactClient(java.lang.CharSequence value) {
-    this.numero_contact_client = value;
-  }
-
-  /**
-   * Gets the value of the 'offre' field.
-   * @return The value of the 'offre' field.
-   */
-  public java.lang.CharSequence getOffre() {
-    return offre;
-  }
-
-  /**
-   * Sets the value of the 'offre' field.
-   * @param value the value to set.
-   */
-  public void setOffre(java.lang.CharSequence value) {
-    this.offre = value;
-  }
-
-  /**
-   * Gets the value of the 'ville_partenaire' field.
-   * @return The value of the 'ville_partenaire' field.
-   */
-  public java.lang.CharSequence getVillePartenaire() {
-    return ville_partenaire;
-  }
-
-  /**
-   * Sets the value of the 'ville_partenaire' field.
-   * @param value the value to set.
-   */
-  public void setVillePartenaire(java.lang.CharSequence value) {
-    this.ville_partenaire = value;
-  }
-
-  /**
-   * Gets the value of the 'prestataire' field.
-   * @return The value of the 'prestataire' field.
-   */
-  public java.lang.CharSequence getPrestataire() {
-    return prestataire;
-  }
-
-  /**
-   * Sets the value of the 'prestataire' field.
-   * @param value the value to set.
-   */
-  public void setPrestataire(java.lang.CharSequence value) {
-    this.prestataire = value;
-  }
-
-  /**
-   * Gets the value of the 'id_profil' field.
-   * @return The value of the 'id_profil' field.
-   */
-  public java.lang.CharSequence getIdProfil() {
-    return id_profil;
-  }
-
-  /**
-   * Sets the value of the 'id_profil' field.
-   * @param value the value to set.
-   */
-  public void setIdProfil(java.lang.CharSequence value) {
-    this.id_profil = value;
-  }
-
-  /**
-   * Gets the value of the 'source_contact' field.
-   * @return The value of the 'source_contact' field.
-   */
-  public java.lang.CharSequence getSourceContact() {
-    return source_contact;
-  }
-
-  /**
-   * Sets the value of the 'source_contact' field.
-   * @param value the value to set.
-   */
-  public void setSourceContact(java.lang.CharSequence value) {
-    this.source_contact = value;
-  }
-
-  /**
-   * Gets the value of the 'type_interaction_crm' field.
-   * @return The value of the 'type_interaction_crm' field.
-   */
-  public java.lang.CharSequence getTypeInteractionCrm() {
-    return type_interaction_crm;
-  }
-
-  /**
-   * Sets the value of the 'type_interaction_crm' field.
-   * @param value the value to set.
-   */
-  public void setTypeInteractionCrm(java.lang.CharSequence value) {
-    this.type_interaction_crm = value;
-  }
-
-  /**
-   * Gets the value of the 'type_offre' field.
-   * @return The value of the 'type_offre' field.
-   */
-  public java.lang.CharSequence getTypeOffre() {
-    return type_offre;
-  }
-
-  /**
-   * Sets the value of the 'type_offre' field.
-   * @param value the value to set.
-   */
-  public void setTypeOffre(java.lang.CharSequence value) {
-    this.type_offre = value;
-  }
-
-  /**
-   * Gets the value of the 'date_interaction_crm' field.
-   * @return The value of the 'date_interaction_crm' field.
-   */
-  public java.lang.CharSequence getDateInteractionCrm() {
-    return date_interaction_crm;
-  }
-
-  /**
-   * Sets the value of the 'date_interaction_crm' field.
-   * @param value the value to set.
-   */
-  public void setDateInteractionCrm(java.lang.CharSequence value) {
-    this.date_interaction_crm = value;
-  }
-
-  /**
-   * Gets the value of the 'id_client' field.
-   * @return The value of the 'id_client' field.
-   */
-  public java.lang.CharSequence getIdClient() {
-    return id_client;
-  }
-
-  /**
-   * Sets the value of the 'id_client' field.
-   * @param value the value to set.
-   */
-  public void setIdClient(java.lang.CharSequence value) {
-    this.id_client = value;
-  }
-
-  /**
-   * Gets the value of the 'region_partenaire' field.
-   * @return The value of the 'region_partenaire' field.
-   */
-  public java.lang.CharSequence getRegionPartenaire() {
-    return region_partenaire;
-  }
-
-  /**
-   * Sets the value of the 'region_partenaire' field.
-   * @param value the value to set.
-   */
-  public void setRegionPartenaire(java.lang.CharSequence value) {
-    this.region_partenaire = value;
-  }
-
-  /**
-   * Gets the value of the 'ancienete_ligne' field.
-   * @return The value of the 'ancienete_ligne' field.
-   */
-  public java.lang.CharSequence getAncieneteLigne() {
-    return ancienete_ligne;
-  }
-
-  /**
-   * Sets the value of the 'ancienete_ligne' field.
-   * @param value the value to set.
-   */
-  public void setAncieneteLigne(java.lang.CharSequence value) {
-    this.ancienete_ligne = value;
-  }
-
-  /**
-   * Gets the value of the 'login_rvr' field.
-   * @return The value of the 'login_rvr' field.
-   */
-  public java.lang.CharSequence getLoginRvr() {
-    return login_rvr;
-  }
-
-  /**
-   * Sets the value of the 'login_rvr' field.
-   * @param value the value to set.
-   */
-  public void setLoginRvr(java.lang.CharSequence value) {
-    this.login_rvr = value;
-  }
-
-  /**
-   * Creates a new Invoke RecordBuilder.
-   * @return A new Invoke RecordBuilder
-   */
-  public static Order.Builder newBuilder() {
-    return new Order.Builder();
-  }
-
-  /**
-   * Creates a new Invoke RecordBuilder by copying an existing Builder.
+   * Creates a new Order RecordBuilder by copying an existing Builder.
    * @param other The existing builder to copy.
-   * @return A new Invoke RecordBuilder
+   * @return A new Order RecordBuilder
    */
-  public static Order.Builder newBuilder(Order.Builder other) {
-    return new Order.Builder(other);
+  public static com.dione.dto.Order.Builder newBuilder(com.dione.dto.Order.Builder other) {
+    return new com.dione.dto.Order.Builder(other);
   }
 
   /**
-   * Creates a new Invoke RecordBuilder by copying an existing Invoke instance.
+   * Creates a new Order RecordBuilder by copying an existing Order instance.
    * @param other The existing instance to copy.
-   * @return A new Invoke RecordBuilder
+   * @return A new Order RecordBuilder
    */
-  public static Order.Builder newBuilder(Order other) {
-    return new Order.Builder(other);
+  public static com.dione.dto.Order.Builder newBuilder(com.dione.dto.Order other) {
+    return new com.dione.dto.Order.Builder(other);
   }
 
   /**
-   * RecordBuilder for Invoke instances.
+   * RecordBuilder for Order instances.
    */
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Order>
     implements org.apache.avro.data.RecordBuilder<Order> {
 
-    private java.lang.CharSequence GSW_PHONE;
-    private java.lang.CharSequence GSW_AGENT_REQ_TYPE;
-    private java.lang.CharSequence GSW_CALLING_LIST;
-    private java.lang.CharSequence GSW_TZ_NAME;
-    private java.lang.CharSequence GSW_CAMPAIGN_NAME;
-    private java.lang.CharSequence GSW_FROM;
-    private java.lang.CharSequence GSW_UNTIL;
-    private java.lang.CharSequence IDENTIFIANT_SURVEIL;
-    private java.lang.CharSequence NBR_QUESTIONS;
-    private java.lang.CharSequence LNG_SURVEIL;
-    private java.lang.CharSequence MSG_ACCEUIL;
-    private java.lang.CharSequence MSG_CONCLUSION;
-    private java.lang.CharSequence IDENTIFIANT_QX1;
-    private java.lang.CharSequence NBR_CHOIX_Q1;
-    private java.lang.CharSequence IDENTIFIANT_QX2;
-    private java.lang.CharSequence NBR_CHOIX_Q2;
-    private java.lang.CharSequence IDENTIFIANT_QX3;
-    private java.lang.CharSequence NBR_CHOIX_Q3;
-    private java.lang.CharSequence IDENTIFIANT_QX4;
-    private java.lang.CharSequence NBR_CHOIX_Q4;
-    private java.lang.CharSequence IDENTIFIANT_QX5;
-    private java.lang.CharSequence NBR_CHOIX_Q5;
-    private java.lang.CharSequence IDENTIFIANT_QX6;
-    private java.lang.CharSequence NBR_CHOIX_Q6;
-    private java.lang.CharSequence IDENTIFIANT_QX7;
-    private java.lang.CharSequence NBR_CHOIX_Q7;
-    private java.lang.CharSequence externalDataReference;
-    private java.lang.CharSequence recipientEmail;
-    private java.lang.CharSequence distributionChannel;
-    private java.lang.CharSequence XMContactID;
-    private java.lang.CharSequence canal_interaction_client;
-    private java.lang.CharSequence code_distributeur;
-    private java.lang.CharSequence code_pdv;
-    private java.lang.CharSequence id_commande;
-    private java.lang.CharSequence id_action;
-    private java.lang.CharSequence id_demande_identification;
-    private java.lang.CharSequence id_demande_resiliation;
-    private java.lang.CharSequence id_case;
-    private java.lang.CharSequence id_user_interaction;
-    private java.lang.CharSequence statut_case;
-    private java.lang.CharSequence interaction_client;
-    private java.lang.CharSequence numero_appelant;
-    private java.lang.CharSequence numero_client;
-    private java.lang.CharSequence numero_contact_client;
-    private java.lang.CharSequence offre;
-    private java.lang.CharSequence ville_partenaire;
-    private java.lang.CharSequence prestataire;
-    private java.lang.CharSequence id_profil;
-    private java.lang.CharSequence source_contact;
-    private java.lang.CharSequence type_interaction_crm;
-    private java.lang.CharSequence type_offre;
-    private java.lang.CharSequence date_interaction_crm;
-    private java.lang.CharSequence id_client;
-    private java.lang.CharSequence region_partenaire;
-    private java.lang.CharSequence ancienete_ligne;
-    private java.lang.CharSequence login_rvr;
+    private java.lang.CharSequence orderId;
+    private java.lang.CharSequence customerId;
+    private java.lang.CharSequence orderDate;
+    private java.lang.CharSequence shippingAddress;
+    private java.lang.CharSequence billingAddress;
+    private java.lang.CharSequence orderStatus;
+    private java.lang.CharSequence paymentMethod;
+    private java.lang.CharSequence totalAmount;
+    private java.lang.CharSequence currency;
+    private java.lang.CharSequence productId_1;
+    private java.lang.CharSequence productName_1;
+    private java.lang.CharSequence quantity_1;
+    private java.lang.CharSequence price_1;
+    private java.lang.CharSequence productId_2;
+    private java.lang.CharSequence productName_2;
+    private java.lang.CharSequence quantity_2;
+    private java.lang.CharSequence price_2;
+    private java.lang.CharSequence productId_3;
+    private java.lang.CharSequence productName_3;
+    private java.lang.CharSequence quantity_3;
+    private java.lang.CharSequence price_3;
 
     /** Creates a new Builder */
     private Builder() {
@@ -1355,2647 +585,1002 @@ public class Order extends org.apache.avro.specific.SpecificRecordBase implement
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(Order.Builder other) {
+    private Builder(com.dione.dto.Order.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.GSW_PHONE)) {
-        this.GSW_PHONE = data().deepCopy(fields()[0].schema(), other.GSW_PHONE);
+      if (isValidValue(fields()[0], other.orderId)) {
+        this.orderId = data().deepCopy(fields()[0].schema(), other.orderId);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.GSW_AGENT_REQ_TYPE)) {
-        this.GSW_AGENT_REQ_TYPE = data().deepCopy(fields()[1].schema(), other.GSW_AGENT_REQ_TYPE);
+      if (isValidValue(fields()[1], other.customerId)) {
+        this.customerId = data().deepCopy(fields()[1].schema(), other.customerId);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.GSW_CALLING_LIST)) {
-        this.GSW_CALLING_LIST = data().deepCopy(fields()[2].schema(), other.GSW_CALLING_LIST);
+      if (isValidValue(fields()[2], other.orderDate)) {
+        this.orderDate = data().deepCopy(fields()[2].schema(), other.orderDate);
         fieldSetFlags()[2] = true;
       }
-      if (isValidValue(fields()[3], other.GSW_TZ_NAME)) {
-        this.GSW_TZ_NAME = data().deepCopy(fields()[3].schema(), other.GSW_TZ_NAME);
+      if (isValidValue(fields()[3], other.shippingAddress)) {
+        this.shippingAddress = data().deepCopy(fields()[3].schema(), other.shippingAddress);
         fieldSetFlags()[3] = true;
       }
-      if (isValidValue(fields()[4], other.GSW_CAMPAIGN_NAME)) {
-        this.GSW_CAMPAIGN_NAME = data().deepCopy(fields()[4].schema(), other.GSW_CAMPAIGN_NAME);
+      if (isValidValue(fields()[4], other.billingAddress)) {
+        this.billingAddress = data().deepCopy(fields()[4].schema(), other.billingAddress);
         fieldSetFlags()[4] = true;
       }
-      if (isValidValue(fields()[5], other.GSW_FROM)) {
-        this.GSW_FROM = data().deepCopy(fields()[5].schema(), other.GSW_FROM);
+      if (isValidValue(fields()[5], other.orderStatus)) {
+        this.orderStatus = data().deepCopy(fields()[5].schema(), other.orderStatus);
         fieldSetFlags()[5] = true;
       }
-      if (isValidValue(fields()[6], other.GSW_UNTIL)) {
-        this.GSW_UNTIL = data().deepCopy(fields()[6].schema(), other.GSW_UNTIL);
+      if (isValidValue(fields()[6], other.paymentMethod)) {
+        this.paymentMethod = data().deepCopy(fields()[6].schema(), other.paymentMethod);
         fieldSetFlags()[6] = true;
       }
-      if (isValidValue(fields()[7], other.IDENTIFIANT_SURVEIL)) {
-        this.IDENTIFIANT_SURVEIL = data().deepCopy(fields()[7].schema(), other.IDENTIFIANT_SURVEIL);
+      if (isValidValue(fields()[7], other.totalAmount)) {
+        this.totalAmount = data().deepCopy(fields()[7].schema(), other.totalAmount);
         fieldSetFlags()[7] = true;
       }
-      if (isValidValue(fields()[8], other.NBR_QUESTIONS)) {
-        this.NBR_QUESTIONS = data().deepCopy(fields()[8].schema(), other.NBR_QUESTIONS);
+      if (isValidValue(fields()[8], other.currency)) {
+        this.currency = data().deepCopy(fields()[8].schema(), other.currency);
         fieldSetFlags()[8] = true;
       }
-      if (isValidValue(fields()[9], other.LNG_SURVEIL)) {
-        this.LNG_SURVEIL = data().deepCopy(fields()[9].schema(), other.LNG_SURVEIL);
+      if (isValidValue(fields()[9], other.productId_1)) {
+        this.productId_1 = data().deepCopy(fields()[9].schema(), other.productId_1);
         fieldSetFlags()[9] = true;
       }
-      if (isValidValue(fields()[10], other.MSG_ACCEUIL)) {
-        this.MSG_ACCEUIL = data().deepCopy(fields()[10].schema(), other.MSG_ACCEUIL);
+      if (isValidValue(fields()[10], other.productName_1)) {
+        this.productName_1 = data().deepCopy(fields()[10].schema(), other.productName_1);
         fieldSetFlags()[10] = true;
       }
-      if (isValidValue(fields()[11], other.MSG_CONCLUSION)) {
-        this.MSG_CONCLUSION = data().deepCopy(fields()[11].schema(), other.MSG_CONCLUSION);
+      if (isValidValue(fields()[11], other.quantity_1)) {
+        this.quantity_1 = data().deepCopy(fields()[11].schema(), other.quantity_1);
         fieldSetFlags()[11] = true;
       }
-      if (isValidValue(fields()[12], other.IDENTIFIANT_QX1)) {
-        this.IDENTIFIANT_QX1 = data().deepCopy(fields()[12].schema(), other.IDENTIFIANT_QX1);
+      if (isValidValue(fields()[12], other.price_1)) {
+        this.price_1 = data().deepCopy(fields()[12].schema(), other.price_1);
         fieldSetFlags()[12] = true;
       }
-      if (isValidValue(fields()[13], other.NBR_CHOIX_Q1)) {
-        this.NBR_CHOIX_Q1 = data().deepCopy(fields()[13].schema(), other.NBR_CHOIX_Q1);
+      if (isValidValue(fields()[13], other.productId_2)) {
+        this.productId_2 = data().deepCopy(fields()[13].schema(), other.productId_2);
         fieldSetFlags()[13] = true;
       }
-      if (isValidValue(fields()[14], other.IDENTIFIANT_QX2)) {
-        this.IDENTIFIANT_QX2 = data().deepCopy(fields()[14].schema(), other.IDENTIFIANT_QX2);
+      if (isValidValue(fields()[14], other.productName_2)) {
+        this.productName_2 = data().deepCopy(fields()[14].schema(), other.productName_2);
         fieldSetFlags()[14] = true;
       }
-      if (isValidValue(fields()[15], other.NBR_CHOIX_Q2)) {
-        this.NBR_CHOIX_Q2 = data().deepCopy(fields()[15].schema(), other.NBR_CHOIX_Q2);
+      if (isValidValue(fields()[15], other.quantity_2)) {
+        this.quantity_2 = data().deepCopy(fields()[15].schema(), other.quantity_2);
         fieldSetFlags()[15] = true;
       }
-      if (isValidValue(fields()[16], other.IDENTIFIANT_QX3)) {
-        this.IDENTIFIANT_QX3 = data().deepCopy(fields()[16].schema(), other.IDENTIFIANT_QX3);
+      if (isValidValue(fields()[16], other.price_2)) {
+        this.price_2 = data().deepCopy(fields()[16].schema(), other.price_2);
         fieldSetFlags()[16] = true;
       }
-      if (isValidValue(fields()[17], other.NBR_CHOIX_Q3)) {
-        this.NBR_CHOIX_Q3 = data().deepCopy(fields()[17].schema(), other.NBR_CHOIX_Q3);
+      if (isValidValue(fields()[17], other.productId_3)) {
+        this.productId_3 = data().deepCopy(fields()[17].schema(), other.productId_3);
         fieldSetFlags()[17] = true;
       }
-      if (isValidValue(fields()[18], other.IDENTIFIANT_QX4)) {
-        this.IDENTIFIANT_QX4 = data().deepCopy(fields()[18].schema(), other.IDENTIFIANT_QX4);
+      if (isValidValue(fields()[18], other.productName_3)) {
+        this.productName_3 = data().deepCopy(fields()[18].schema(), other.productName_3);
         fieldSetFlags()[18] = true;
       }
-      if (isValidValue(fields()[19], other.NBR_CHOIX_Q4)) {
-        this.NBR_CHOIX_Q4 = data().deepCopy(fields()[19].schema(), other.NBR_CHOIX_Q4);
+      if (isValidValue(fields()[19], other.quantity_3)) {
+        this.quantity_3 = data().deepCopy(fields()[19].schema(), other.quantity_3);
         fieldSetFlags()[19] = true;
       }
-      if (isValidValue(fields()[20], other.IDENTIFIANT_QX5)) {
-        this.IDENTIFIANT_QX5 = data().deepCopy(fields()[20].schema(), other.IDENTIFIANT_QX5);
+      if (isValidValue(fields()[20], other.price_3)) {
+        this.price_3 = data().deepCopy(fields()[20].schema(), other.price_3);
         fieldSetFlags()[20] = true;
-      }
-      if (isValidValue(fields()[21], other.NBR_CHOIX_Q5)) {
-        this.NBR_CHOIX_Q5 = data().deepCopy(fields()[21].schema(), other.NBR_CHOIX_Q5);
-        fieldSetFlags()[21] = true;
-      }
-      if (isValidValue(fields()[22], other.IDENTIFIANT_QX6)) {
-        this.IDENTIFIANT_QX6 = data().deepCopy(fields()[22].schema(), other.IDENTIFIANT_QX6);
-        fieldSetFlags()[22] = true;
-      }
-      if (isValidValue(fields()[23], other.NBR_CHOIX_Q6)) {
-        this.NBR_CHOIX_Q6 = data().deepCopy(fields()[23].schema(), other.NBR_CHOIX_Q6);
-        fieldSetFlags()[23] = true;
-      }
-      if (isValidValue(fields()[24], other.IDENTIFIANT_QX7)) {
-        this.IDENTIFIANT_QX7 = data().deepCopy(fields()[24].schema(), other.IDENTIFIANT_QX7);
-        fieldSetFlags()[24] = true;
-      }
-      if (isValidValue(fields()[25], other.NBR_CHOIX_Q7)) {
-        this.NBR_CHOIX_Q7 = data().deepCopy(fields()[25].schema(), other.NBR_CHOIX_Q7);
-        fieldSetFlags()[25] = true;
-      }
-      if (isValidValue(fields()[26], other.externalDataReference)) {
-        this.externalDataReference = data().deepCopy(fields()[26].schema(), other.externalDataReference);
-        fieldSetFlags()[26] = true;
-      }
-      if (isValidValue(fields()[27], other.recipientEmail)) {
-        this.recipientEmail = data().deepCopy(fields()[27].schema(), other.recipientEmail);
-        fieldSetFlags()[27] = true;
-      }
-      if (isValidValue(fields()[28], other.distributionChannel)) {
-        this.distributionChannel = data().deepCopy(fields()[28].schema(), other.distributionChannel);
-        fieldSetFlags()[28] = true;
-      }
-      if (isValidValue(fields()[29], other.XMContactID)) {
-        this.XMContactID = data().deepCopy(fields()[29].schema(), other.XMContactID);
-        fieldSetFlags()[29] = true;
-      }
-      if (isValidValue(fields()[30], other.canal_interaction_client)) {
-        this.canal_interaction_client = data().deepCopy(fields()[30].schema(), other.canal_interaction_client);
-        fieldSetFlags()[30] = true;
-      }
-      if (isValidValue(fields()[31], other.code_distributeur)) {
-        this.code_distributeur = data().deepCopy(fields()[31].schema(), other.code_distributeur);
-        fieldSetFlags()[31] = true;
-      }
-      if (isValidValue(fields()[32], other.code_pdv)) {
-        this.code_pdv = data().deepCopy(fields()[32].schema(), other.code_pdv);
-        fieldSetFlags()[32] = true;
-      }
-      if (isValidValue(fields()[33], other.id_commande)) {
-        this.id_commande = data().deepCopy(fields()[33].schema(), other.id_commande);
-        fieldSetFlags()[33] = true;
-      }
-      if (isValidValue(fields()[34], other.id_action)) {
-        this.id_action = data().deepCopy(fields()[34].schema(), other.id_action);
-        fieldSetFlags()[34] = true;
-      }
-      if (isValidValue(fields()[35], other.id_demande_identification)) {
-        this.id_demande_identification = data().deepCopy(fields()[35].schema(), other.id_demande_identification);
-        fieldSetFlags()[35] = true;
-      }
-      if (isValidValue(fields()[36], other.id_demande_resiliation)) {
-        this.id_demande_resiliation = data().deepCopy(fields()[36].schema(), other.id_demande_resiliation);
-        fieldSetFlags()[36] = true;
-      }
-      if (isValidValue(fields()[37], other.id_case)) {
-        this.id_case = data().deepCopy(fields()[37].schema(), other.id_case);
-        fieldSetFlags()[37] = true;
-      }
-      if (isValidValue(fields()[38], other.id_user_interaction)) {
-        this.id_user_interaction = data().deepCopy(fields()[38].schema(), other.id_user_interaction);
-        fieldSetFlags()[38] = true;
-      }
-      if (isValidValue(fields()[39], other.statut_case)) {
-        this.statut_case = data().deepCopy(fields()[39].schema(), other.statut_case);
-        fieldSetFlags()[39] = true;
-      }
-      if (isValidValue(fields()[40], other.interaction_client)) {
-        this.interaction_client = data().deepCopy(fields()[40].schema(), other.interaction_client);
-        fieldSetFlags()[40] = true;
-      }
-      if (isValidValue(fields()[41], other.numero_appelant)) {
-        this.numero_appelant = data().deepCopy(fields()[41].schema(), other.numero_appelant);
-        fieldSetFlags()[41] = true;
-      }
-      if (isValidValue(fields()[42], other.numero_client)) {
-        this.numero_client = data().deepCopy(fields()[42].schema(), other.numero_client);
-        fieldSetFlags()[42] = true;
-      }
-      if (isValidValue(fields()[43], other.numero_contact_client)) {
-        this.numero_contact_client = data().deepCopy(fields()[43].schema(), other.numero_contact_client);
-        fieldSetFlags()[43] = true;
-      }
-      if (isValidValue(fields()[44], other.offre)) {
-        this.offre = data().deepCopy(fields()[44].schema(), other.offre);
-        fieldSetFlags()[44] = true;
-      }
-      if (isValidValue(fields()[45], other.ville_partenaire)) {
-        this.ville_partenaire = data().deepCopy(fields()[45].schema(), other.ville_partenaire);
-        fieldSetFlags()[45] = true;
-      }
-      if (isValidValue(fields()[46], other.prestataire)) {
-        this.prestataire = data().deepCopy(fields()[46].schema(), other.prestataire);
-        fieldSetFlags()[46] = true;
-      }
-      if (isValidValue(fields()[47], other.id_profil)) {
-        this.id_profil = data().deepCopy(fields()[47].schema(), other.id_profil);
-        fieldSetFlags()[47] = true;
-      }
-      if (isValidValue(fields()[48], other.source_contact)) {
-        this.source_contact = data().deepCopy(fields()[48].schema(), other.source_contact);
-        fieldSetFlags()[48] = true;
-      }
-      if (isValidValue(fields()[49], other.type_interaction_crm)) {
-        this.type_interaction_crm = data().deepCopy(fields()[49].schema(), other.type_interaction_crm);
-        fieldSetFlags()[49] = true;
-      }
-      if (isValidValue(fields()[50], other.type_offre)) {
-        this.type_offre = data().deepCopy(fields()[50].schema(), other.type_offre);
-        fieldSetFlags()[50] = true;
-      }
-      if (isValidValue(fields()[51], other.date_interaction_crm)) {
-        this.date_interaction_crm = data().deepCopy(fields()[51].schema(), other.date_interaction_crm);
-        fieldSetFlags()[51] = true;
-      }
-      if (isValidValue(fields()[52], other.id_client)) {
-        this.id_client = data().deepCopy(fields()[52].schema(), other.id_client);
-        fieldSetFlags()[52] = true;
-      }
-      if (isValidValue(fields()[53], other.region_partenaire)) {
-        this.region_partenaire = data().deepCopy(fields()[53].schema(), other.region_partenaire);
-        fieldSetFlags()[53] = true;
-      }
-      if (isValidValue(fields()[54], other.ancienete_ligne)) {
-        this.ancienete_ligne = data().deepCopy(fields()[54].schema(), other.ancienete_ligne);
-        fieldSetFlags()[54] = true;
-      }
-      if (isValidValue(fields()[55], other.login_rvr)) {
-        this.login_rvr = data().deepCopy(fields()[55].schema(), other.login_rvr);
-        fieldSetFlags()[55] = true;
       }
     }
 
     /**
-     * Creates a Builder by copying an existing Invoke instance
+     * Creates a Builder by copying an existing Order instance
      * @param other The existing instance to copy.
      */
-    private Builder(Order other) {
+    private Builder(com.dione.dto.Order other) {
             super(SCHEMA$);
-      if (isValidValue(fields()[0], other.GSW_PHONE)) {
-        this.GSW_PHONE = data().deepCopy(fields()[0].schema(), other.GSW_PHONE);
+      if (isValidValue(fields()[0], other.orderId)) {
+        this.orderId = data().deepCopy(fields()[0].schema(), other.orderId);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.GSW_AGENT_REQ_TYPE)) {
-        this.GSW_AGENT_REQ_TYPE = data().deepCopy(fields()[1].schema(), other.GSW_AGENT_REQ_TYPE);
+      if (isValidValue(fields()[1], other.customerId)) {
+        this.customerId = data().deepCopy(fields()[1].schema(), other.customerId);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.GSW_CALLING_LIST)) {
-        this.GSW_CALLING_LIST = data().deepCopy(fields()[2].schema(), other.GSW_CALLING_LIST);
+      if (isValidValue(fields()[2], other.orderDate)) {
+        this.orderDate = data().deepCopy(fields()[2].schema(), other.orderDate);
         fieldSetFlags()[2] = true;
       }
-      if (isValidValue(fields()[3], other.GSW_TZ_NAME)) {
-        this.GSW_TZ_NAME = data().deepCopy(fields()[3].schema(), other.GSW_TZ_NAME);
+      if (isValidValue(fields()[3], other.shippingAddress)) {
+        this.shippingAddress = data().deepCopy(fields()[3].schema(), other.shippingAddress);
         fieldSetFlags()[3] = true;
       }
-      if (isValidValue(fields()[4], other.GSW_CAMPAIGN_NAME)) {
-        this.GSW_CAMPAIGN_NAME = data().deepCopy(fields()[4].schema(), other.GSW_CAMPAIGN_NAME);
+      if (isValidValue(fields()[4], other.billingAddress)) {
+        this.billingAddress = data().deepCopy(fields()[4].schema(), other.billingAddress);
         fieldSetFlags()[4] = true;
       }
-      if (isValidValue(fields()[5], other.GSW_FROM)) {
-        this.GSW_FROM = data().deepCopy(fields()[5].schema(), other.GSW_FROM);
+      if (isValidValue(fields()[5], other.orderStatus)) {
+        this.orderStatus = data().deepCopy(fields()[5].schema(), other.orderStatus);
         fieldSetFlags()[5] = true;
       }
-      if (isValidValue(fields()[6], other.GSW_UNTIL)) {
-        this.GSW_UNTIL = data().deepCopy(fields()[6].schema(), other.GSW_UNTIL);
+      if (isValidValue(fields()[6], other.paymentMethod)) {
+        this.paymentMethod = data().deepCopy(fields()[6].schema(), other.paymentMethod);
         fieldSetFlags()[6] = true;
       }
-      if (isValidValue(fields()[7], other.IDENTIFIANT_SURVEIL)) {
-        this.IDENTIFIANT_SURVEIL = data().deepCopy(fields()[7].schema(), other.IDENTIFIANT_SURVEIL);
+      if (isValidValue(fields()[7], other.totalAmount)) {
+        this.totalAmount = data().deepCopy(fields()[7].schema(), other.totalAmount);
         fieldSetFlags()[7] = true;
       }
-      if (isValidValue(fields()[8], other.NBR_QUESTIONS)) {
-        this.NBR_QUESTIONS = data().deepCopy(fields()[8].schema(), other.NBR_QUESTIONS);
+      if (isValidValue(fields()[8], other.currency)) {
+        this.currency = data().deepCopy(fields()[8].schema(), other.currency);
         fieldSetFlags()[8] = true;
       }
-      if (isValidValue(fields()[9], other.LNG_SURVEIL)) {
-        this.LNG_SURVEIL = data().deepCopy(fields()[9].schema(), other.LNG_SURVEIL);
+      if (isValidValue(fields()[9], other.productId_1)) {
+        this.productId_1 = data().deepCopy(fields()[9].schema(), other.productId_1);
         fieldSetFlags()[9] = true;
       }
-      if (isValidValue(fields()[10], other.MSG_ACCEUIL)) {
-        this.MSG_ACCEUIL = data().deepCopy(fields()[10].schema(), other.MSG_ACCEUIL);
+      if (isValidValue(fields()[10], other.productName_1)) {
+        this.productName_1 = data().deepCopy(fields()[10].schema(), other.productName_1);
         fieldSetFlags()[10] = true;
       }
-      if (isValidValue(fields()[11], other.MSG_CONCLUSION)) {
-        this.MSG_CONCLUSION = data().deepCopy(fields()[11].schema(), other.MSG_CONCLUSION);
+      if (isValidValue(fields()[11], other.quantity_1)) {
+        this.quantity_1 = data().deepCopy(fields()[11].schema(), other.quantity_1);
         fieldSetFlags()[11] = true;
       }
-      if (isValidValue(fields()[12], other.IDENTIFIANT_QX1)) {
-        this.IDENTIFIANT_QX1 = data().deepCopy(fields()[12].schema(), other.IDENTIFIANT_QX1);
+      if (isValidValue(fields()[12], other.price_1)) {
+        this.price_1 = data().deepCopy(fields()[12].schema(), other.price_1);
         fieldSetFlags()[12] = true;
       }
-      if (isValidValue(fields()[13], other.NBR_CHOIX_Q1)) {
-        this.NBR_CHOIX_Q1 = data().deepCopy(fields()[13].schema(), other.NBR_CHOIX_Q1);
+      if (isValidValue(fields()[13], other.productId_2)) {
+        this.productId_2 = data().deepCopy(fields()[13].schema(), other.productId_2);
         fieldSetFlags()[13] = true;
       }
-      if (isValidValue(fields()[14], other.IDENTIFIANT_QX2)) {
-        this.IDENTIFIANT_QX2 = data().deepCopy(fields()[14].schema(), other.IDENTIFIANT_QX2);
+      if (isValidValue(fields()[14], other.productName_2)) {
+        this.productName_2 = data().deepCopy(fields()[14].schema(), other.productName_2);
         fieldSetFlags()[14] = true;
       }
-      if (isValidValue(fields()[15], other.NBR_CHOIX_Q2)) {
-        this.NBR_CHOIX_Q2 = data().deepCopy(fields()[15].schema(), other.NBR_CHOIX_Q2);
+      if (isValidValue(fields()[15], other.quantity_2)) {
+        this.quantity_2 = data().deepCopy(fields()[15].schema(), other.quantity_2);
         fieldSetFlags()[15] = true;
       }
-      if (isValidValue(fields()[16], other.IDENTIFIANT_QX3)) {
-        this.IDENTIFIANT_QX3 = data().deepCopy(fields()[16].schema(), other.IDENTIFIANT_QX3);
+      if (isValidValue(fields()[16], other.price_2)) {
+        this.price_2 = data().deepCopy(fields()[16].schema(), other.price_2);
         fieldSetFlags()[16] = true;
       }
-      if (isValidValue(fields()[17], other.NBR_CHOIX_Q3)) {
-        this.NBR_CHOIX_Q3 = data().deepCopy(fields()[17].schema(), other.NBR_CHOIX_Q3);
+      if (isValidValue(fields()[17], other.productId_3)) {
+        this.productId_3 = data().deepCopy(fields()[17].schema(), other.productId_3);
         fieldSetFlags()[17] = true;
       }
-      if (isValidValue(fields()[18], other.IDENTIFIANT_QX4)) {
-        this.IDENTIFIANT_QX4 = data().deepCopy(fields()[18].schema(), other.IDENTIFIANT_QX4);
+      if (isValidValue(fields()[18], other.productName_3)) {
+        this.productName_3 = data().deepCopy(fields()[18].schema(), other.productName_3);
         fieldSetFlags()[18] = true;
       }
-      if (isValidValue(fields()[19], other.NBR_CHOIX_Q4)) {
-        this.NBR_CHOIX_Q4 = data().deepCopy(fields()[19].schema(), other.NBR_CHOIX_Q4);
+      if (isValidValue(fields()[19], other.quantity_3)) {
+        this.quantity_3 = data().deepCopy(fields()[19].schema(), other.quantity_3);
         fieldSetFlags()[19] = true;
       }
-      if (isValidValue(fields()[20], other.IDENTIFIANT_QX5)) {
-        this.IDENTIFIANT_QX5 = data().deepCopy(fields()[20].schema(), other.IDENTIFIANT_QX5);
+      if (isValidValue(fields()[20], other.price_3)) {
+        this.price_3 = data().deepCopy(fields()[20].schema(), other.price_3);
         fieldSetFlags()[20] = true;
       }
-      if (isValidValue(fields()[21], other.NBR_CHOIX_Q5)) {
-        this.NBR_CHOIX_Q5 = data().deepCopy(fields()[21].schema(), other.NBR_CHOIX_Q5);
-        fieldSetFlags()[21] = true;
-      }
-      if (isValidValue(fields()[22], other.IDENTIFIANT_QX6)) {
-        this.IDENTIFIANT_QX6 = data().deepCopy(fields()[22].schema(), other.IDENTIFIANT_QX6);
-        fieldSetFlags()[22] = true;
-      }
-      if (isValidValue(fields()[23], other.NBR_CHOIX_Q6)) {
-        this.NBR_CHOIX_Q6 = data().deepCopy(fields()[23].schema(), other.NBR_CHOIX_Q6);
-        fieldSetFlags()[23] = true;
-      }
-      if (isValidValue(fields()[24], other.IDENTIFIANT_QX7)) {
-        this.IDENTIFIANT_QX7 = data().deepCopy(fields()[24].schema(), other.IDENTIFIANT_QX7);
-        fieldSetFlags()[24] = true;
-      }
-      if (isValidValue(fields()[25], other.NBR_CHOIX_Q7)) {
-        this.NBR_CHOIX_Q7 = data().deepCopy(fields()[25].schema(), other.NBR_CHOIX_Q7);
-        fieldSetFlags()[25] = true;
-      }
-      if (isValidValue(fields()[26], other.externalDataReference)) {
-        this.externalDataReference = data().deepCopy(fields()[26].schema(), other.externalDataReference);
-        fieldSetFlags()[26] = true;
-      }
-      if (isValidValue(fields()[27], other.recipientEmail)) {
-        this.recipientEmail = data().deepCopy(fields()[27].schema(), other.recipientEmail);
-        fieldSetFlags()[27] = true;
-      }
-      if (isValidValue(fields()[28], other.distributionChannel)) {
-        this.distributionChannel = data().deepCopy(fields()[28].schema(), other.distributionChannel);
-        fieldSetFlags()[28] = true;
-      }
-      if (isValidValue(fields()[29], other.XMContactID)) {
-        this.XMContactID = data().deepCopy(fields()[29].schema(), other.XMContactID);
-        fieldSetFlags()[29] = true;
-      }
-      if (isValidValue(fields()[30], other.canal_interaction_client)) {
-        this.canal_interaction_client = data().deepCopy(fields()[30].schema(), other.canal_interaction_client);
-        fieldSetFlags()[30] = true;
-      }
-      if (isValidValue(fields()[31], other.code_distributeur)) {
-        this.code_distributeur = data().deepCopy(fields()[31].schema(), other.code_distributeur);
-        fieldSetFlags()[31] = true;
-      }
-      if (isValidValue(fields()[32], other.code_pdv)) {
-        this.code_pdv = data().deepCopy(fields()[32].schema(), other.code_pdv);
-        fieldSetFlags()[32] = true;
-      }
-      if (isValidValue(fields()[33], other.id_commande)) {
-        this.id_commande = data().deepCopy(fields()[33].schema(), other.id_commande);
-        fieldSetFlags()[33] = true;
-      }
-      if (isValidValue(fields()[34], other.id_action)) {
-        this.id_action = data().deepCopy(fields()[34].schema(), other.id_action);
-        fieldSetFlags()[34] = true;
-      }
-      if (isValidValue(fields()[35], other.id_demande_identification)) {
-        this.id_demande_identification = data().deepCopy(fields()[35].schema(), other.id_demande_identification);
-        fieldSetFlags()[35] = true;
-      }
-      if (isValidValue(fields()[36], other.id_demande_resiliation)) {
-        this.id_demande_resiliation = data().deepCopy(fields()[36].schema(), other.id_demande_resiliation);
-        fieldSetFlags()[36] = true;
-      }
-      if (isValidValue(fields()[37], other.id_case)) {
-        this.id_case = data().deepCopy(fields()[37].schema(), other.id_case);
-        fieldSetFlags()[37] = true;
-      }
-      if (isValidValue(fields()[38], other.id_user_interaction)) {
-        this.id_user_interaction = data().deepCopy(fields()[38].schema(), other.id_user_interaction);
-        fieldSetFlags()[38] = true;
-      }
-      if (isValidValue(fields()[39], other.statut_case)) {
-        this.statut_case = data().deepCopy(fields()[39].schema(), other.statut_case);
-        fieldSetFlags()[39] = true;
-      }
-      if (isValidValue(fields()[40], other.interaction_client)) {
-        this.interaction_client = data().deepCopy(fields()[40].schema(), other.interaction_client);
-        fieldSetFlags()[40] = true;
-      }
-      if (isValidValue(fields()[41], other.numero_appelant)) {
-        this.numero_appelant = data().deepCopy(fields()[41].schema(), other.numero_appelant);
-        fieldSetFlags()[41] = true;
-      }
-      if (isValidValue(fields()[42], other.numero_client)) {
-        this.numero_client = data().deepCopy(fields()[42].schema(), other.numero_client);
-        fieldSetFlags()[42] = true;
-      }
-      if (isValidValue(fields()[43], other.numero_contact_client)) {
-        this.numero_contact_client = data().deepCopy(fields()[43].schema(), other.numero_contact_client);
-        fieldSetFlags()[43] = true;
-      }
-      if (isValidValue(fields()[44], other.offre)) {
-        this.offre = data().deepCopy(fields()[44].schema(), other.offre);
-        fieldSetFlags()[44] = true;
-      }
-      if (isValidValue(fields()[45], other.ville_partenaire)) {
-        this.ville_partenaire = data().deepCopy(fields()[45].schema(), other.ville_partenaire);
-        fieldSetFlags()[45] = true;
-      }
-      if (isValidValue(fields()[46], other.prestataire)) {
-        this.prestataire = data().deepCopy(fields()[46].schema(), other.prestataire);
-        fieldSetFlags()[46] = true;
-      }
-      if (isValidValue(fields()[47], other.id_profil)) {
-        this.id_profil = data().deepCopy(fields()[47].schema(), other.id_profil);
-        fieldSetFlags()[47] = true;
-      }
-      if (isValidValue(fields()[48], other.source_contact)) {
-        this.source_contact = data().deepCopy(fields()[48].schema(), other.source_contact);
-        fieldSetFlags()[48] = true;
-      }
-      if (isValidValue(fields()[49], other.type_interaction_crm)) {
-        this.type_interaction_crm = data().deepCopy(fields()[49].schema(), other.type_interaction_crm);
-        fieldSetFlags()[49] = true;
-      }
-      if (isValidValue(fields()[50], other.type_offre)) {
-        this.type_offre = data().deepCopy(fields()[50].schema(), other.type_offre);
-        fieldSetFlags()[50] = true;
-      }
-      if (isValidValue(fields()[51], other.date_interaction_crm)) {
-        this.date_interaction_crm = data().deepCopy(fields()[51].schema(), other.date_interaction_crm);
-        fieldSetFlags()[51] = true;
-      }
-      if (isValidValue(fields()[52], other.id_client)) {
-        this.id_client = data().deepCopy(fields()[52].schema(), other.id_client);
-        fieldSetFlags()[52] = true;
-      }
-      if (isValidValue(fields()[53], other.region_partenaire)) {
-        this.region_partenaire = data().deepCopy(fields()[53].schema(), other.region_partenaire);
-        fieldSetFlags()[53] = true;
-      }
-      if (isValidValue(fields()[54], other.ancienete_ligne)) {
-        this.ancienete_ligne = data().deepCopy(fields()[54].schema(), other.ancienete_ligne);
-        fieldSetFlags()[54] = true;
-      }
-      if (isValidValue(fields()[55], other.login_rvr)) {
-        this.login_rvr = data().deepCopy(fields()[55].schema(), other.login_rvr);
-        fieldSetFlags()[55] = true;
-      }
     }
 
     /**
-      * Gets the value of the 'GSW_PHONE' field.
+      * Gets the value of the 'orderId' field.
       * @return The value.
       */
-    public java.lang.CharSequence getGSWPHONE() {
-      return GSW_PHONE;
+    public java.lang.CharSequence getOrderId() {
+      return orderId;
     }
 
     /**
-      * Sets the value of the 'GSW_PHONE' field.
-      * @param value The value of 'GSW_PHONE'.
+      * Sets the value of the 'orderId' field.
+      * @param value The value of 'orderId'.
       * @return This builder.
       */
-    public Order.Builder setGSWPHONE(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setOrderId(java.lang.CharSequence value) {
       validate(fields()[0], value);
-      this.GSW_PHONE = value;
+      this.orderId = value;
       fieldSetFlags()[0] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'GSW_PHONE' field has been set.
-      * @return True if the 'GSW_PHONE' field has been set, false otherwise.
+      * Checks whether the 'orderId' field has been set.
+      * @return True if the 'orderId' field has been set, false otherwise.
       */
-    public boolean hasGSWPHONE() {
+    public boolean hasOrderId() {
       return fieldSetFlags()[0];
     }
 
 
     /**
-      * Clears the value of the 'GSW_PHONE' field.
+      * Clears the value of the 'orderId' field.
       * @return This builder.
       */
-    public Order.Builder clearGSWPHONE() {
-      GSW_PHONE = null;
+    public com.dione.dto.Order.Builder clearOrderId() {
+      orderId = null;
       fieldSetFlags()[0] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'GSW_AGENT_REQ_TYPE' field.
+      * Gets the value of the 'customerId' field.
       * @return The value.
       */
-    public java.lang.CharSequence getGSWAGENTREQTYPE() {
-      return GSW_AGENT_REQ_TYPE;
+    public java.lang.CharSequence getCustomerId() {
+      return customerId;
     }
 
     /**
-      * Sets the value of the 'GSW_AGENT_REQ_TYPE' field.
-      * @param value The value of 'GSW_AGENT_REQ_TYPE'.
+      * Sets the value of the 'customerId' field.
+      * @param value The value of 'customerId'.
       * @return This builder.
       */
-    public Order.Builder setGSWAGENTREQTYPE(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setCustomerId(java.lang.CharSequence value) {
       validate(fields()[1], value);
-      this.GSW_AGENT_REQ_TYPE = value;
+      this.customerId = value;
       fieldSetFlags()[1] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'GSW_AGENT_REQ_TYPE' field has been set.
-      * @return True if the 'GSW_AGENT_REQ_TYPE' field has been set, false otherwise.
+      * Checks whether the 'customerId' field has been set.
+      * @return True if the 'customerId' field has been set, false otherwise.
       */
-    public boolean hasGSWAGENTREQTYPE() {
+    public boolean hasCustomerId() {
       return fieldSetFlags()[1];
     }
 
 
     /**
-      * Clears the value of the 'GSW_AGENT_REQ_TYPE' field.
+      * Clears the value of the 'customerId' field.
       * @return This builder.
       */
-    public Order.Builder clearGSWAGENTREQTYPE() {
-      GSW_AGENT_REQ_TYPE = null;
+    public com.dione.dto.Order.Builder clearCustomerId() {
+      customerId = null;
       fieldSetFlags()[1] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'GSW_CALLING_LIST' field.
+      * Gets the value of the 'orderDate' field.
       * @return The value.
       */
-    public java.lang.CharSequence getGSWCALLINGLIST() {
-      return GSW_CALLING_LIST;
+    public java.lang.CharSequence getOrderDate() {
+      return orderDate;
     }
 
     /**
-      * Sets the value of the 'GSW_CALLING_LIST' field.
-      * @param value The value of 'GSW_CALLING_LIST'.
+      * Sets the value of the 'orderDate' field.
+      * @param value The value of 'orderDate'.
       * @return This builder.
       */
-    public Order.Builder setGSWCALLINGLIST(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setOrderDate(java.lang.CharSequence value) {
       validate(fields()[2], value);
-      this.GSW_CALLING_LIST = value;
+      this.orderDate = value;
       fieldSetFlags()[2] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'GSW_CALLING_LIST' field has been set.
-      * @return True if the 'GSW_CALLING_LIST' field has been set, false otherwise.
+      * Checks whether the 'orderDate' field has been set.
+      * @return True if the 'orderDate' field has been set, false otherwise.
       */
-    public boolean hasGSWCALLINGLIST() {
+    public boolean hasOrderDate() {
       return fieldSetFlags()[2];
     }
 
 
     /**
-      * Clears the value of the 'GSW_CALLING_LIST' field.
+      * Clears the value of the 'orderDate' field.
       * @return This builder.
       */
-    public Order.Builder clearGSWCALLINGLIST() {
-      GSW_CALLING_LIST = null;
+    public com.dione.dto.Order.Builder clearOrderDate() {
+      orderDate = null;
       fieldSetFlags()[2] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'GSW_TZ_NAME' field.
+      * Gets the value of the 'shippingAddress' field.
       * @return The value.
       */
-    public java.lang.CharSequence getGSWTZNAME() {
-      return GSW_TZ_NAME;
+    public java.lang.CharSequence getShippingAddress() {
+      return shippingAddress;
     }
 
     /**
-      * Sets the value of the 'GSW_TZ_NAME' field.
-      * @param value The value of 'GSW_TZ_NAME'.
+      * Sets the value of the 'shippingAddress' field.
+      * @param value The value of 'shippingAddress'.
       * @return This builder.
       */
-    public Order.Builder setGSWTZNAME(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setShippingAddress(java.lang.CharSequence value) {
       validate(fields()[3], value);
-      this.GSW_TZ_NAME = value;
+      this.shippingAddress = value;
       fieldSetFlags()[3] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'GSW_TZ_NAME' field has been set.
-      * @return True if the 'GSW_TZ_NAME' field has been set, false otherwise.
+      * Checks whether the 'shippingAddress' field has been set.
+      * @return True if the 'shippingAddress' field has been set, false otherwise.
       */
-    public boolean hasGSWTZNAME() {
+    public boolean hasShippingAddress() {
       return fieldSetFlags()[3];
     }
 
 
     /**
-      * Clears the value of the 'GSW_TZ_NAME' field.
+      * Clears the value of the 'shippingAddress' field.
       * @return This builder.
       */
-    public Order.Builder clearGSWTZNAME() {
-      GSW_TZ_NAME = null;
+    public com.dione.dto.Order.Builder clearShippingAddress() {
+      shippingAddress = null;
       fieldSetFlags()[3] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'GSW_CAMPAIGN_NAME' field.
+      * Gets the value of the 'billingAddress' field.
       * @return The value.
       */
-    public java.lang.CharSequence getGSWCAMPAIGNNAME() {
-      return GSW_CAMPAIGN_NAME;
+    public java.lang.CharSequence getBillingAddress() {
+      return billingAddress;
     }
 
     /**
-      * Sets the value of the 'GSW_CAMPAIGN_NAME' field.
-      * @param value The value of 'GSW_CAMPAIGN_NAME'.
+      * Sets the value of the 'billingAddress' field.
+      * @param value The value of 'billingAddress'.
       * @return This builder.
       */
-    public Order.Builder setGSWCAMPAIGNNAME(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setBillingAddress(java.lang.CharSequence value) {
       validate(fields()[4], value);
-      this.GSW_CAMPAIGN_NAME = value;
+      this.billingAddress = value;
       fieldSetFlags()[4] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'GSW_CAMPAIGN_NAME' field has been set.
-      * @return True if the 'GSW_CAMPAIGN_NAME' field has been set, false otherwise.
+      * Checks whether the 'billingAddress' field has been set.
+      * @return True if the 'billingAddress' field has been set, false otherwise.
       */
-    public boolean hasGSWCAMPAIGNNAME() {
+    public boolean hasBillingAddress() {
       return fieldSetFlags()[4];
     }
 
 
     /**
-      * Clears the value of the 'GSW_CAMPAIGN_NAME' field.
+      * Clears the value of the 'billingAddress' field.
       * @return This builder.
       */
-    public Order.Builder clearGSWCAMPAIGNNAME() {
-      GSW_CAMPAIGN_NAME = null;
+    public com.dione.dto.Order.Builder clearBillingAddress() {
+      billingAddress = null;
       fieldSetFlags()[4] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'GSW_FROM' field.
+      * Gets the value of the 'orderStatus' field.
       * @return The value.
       */
-    public java.lang.CharSequence getGSWFROM() {
-      return GSW_FROM;
+    public java.lang.CharSequence getOrderStatus() {
+      return orderStatus;
     }
 
     /**
-      * Sets the value of the 'GSW_FROM' field.
-      * @param value The value of 'GSW_FROM'.
+      * Sets the value of the 'orderStatus' field.
+      * @param value The value of 'orderStatus'.
       * @return This builder.
       */
-    public Order.Builder setGSWFROM(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setOrderStatus(java.lang.CharSequence value) {
       validate(fields()[5], value);
-      this.GSW_FROM = value;
+      this.orderStatus = value;
       fieldSetFlags()[5] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'GSW_FROM' field has been set.
-      * @return True if the 'GSW_FROM' field has been set, false otherwise.
+      * Checks whether the 'orderStatus' field has been set.
+      * @return True if the 'orderStatus' field has been set, false otherwise.
       */
-    public boolean hasGSWFROM() {
+    public boolean hasOrderStatus() {
       return fieldSetFlags()[5];
     }
 
 
     /**
-      * Clears the value of the 'GSW_FROM' field.
+      * Clears the value of the 'orderStatus' field.
       * @return This builder.
       */
-    public Order.Builder clearGSWFROM() {
-      GSW_FROM = null;
+    public com.dione.dto.Order.Builder clearOrderStatus() {
+      orderStatus = null;
       fieldSetFlags()[5] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'GSW_UNTIL' field.
+      * Gets the value of the 'paymentMethod' field.
       * @return The value.
       */
-    public java.lang.CharSequence getGSWUNTIL() {
-      return GSW_UNTIL;
+    public java.lang.CharSequence getPaymentMethod() {
+      return paymentMethod;
     }
 
     /**
-      * Sets the value of the 'GSW_UNTIL' field.
-      * @param value The value of 'GSW_UNTIL'.
+      * Sets the value of the 'paymentMethod' field.
+      * @param value The value of 'paymentMethod'.
       * @return This builder.
       */
-    public Order.Builder setGSWUNTIL(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setPaymentMethod(java.lang.CharSequence value) {
       validate(fields()[6], value);
-      this.GSW_UNTIL = value;
+      this.paymentMethod = value;
       fieldSetFlags()[6] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'GSW_UNTIL' field has been set.
-      * @return True if the 'GSW_UNTIL' field has been set, false otherwise.
+      * Checks whether the 'paymentMethod' field has been set.
+      * @return True if the 'paymentMethod' field has been set, false otherwise.
       */
-    public boolean hasGSWUNTIL() {
+    public boolean hasPaymentMethod() {
       return fieldSetFlags()[6];
     }
 
 
     /**
-      * Clears the value of the 'GSW_UNTIL' field.
+      * Clears the value of the 'paymentMethod' field.
       * @return This builder.
       */
-    public Order.Builder clearGSWUNTIL() {
-      GSW_UNTIL = null;
+    public com.dione.dto.Order.Builder clearPaymentMethod() {
+      paymentMethod = null;
       fieldSetFlags()[6] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'IDENTIFIANT_SURVEIL' field.
+      * Gets the value of the 'totalAmount' field.
       * @return The value.
       */
-    public java.lang.CharSequence getIDENTIFIANTSURVEIL() {
-      return IDENTIFIANT_SURVEIL;
+    public java.lang.CharSequence getTotalAmount() {
+      return totalAmount;
     }
 
     /**
-      * Sets the value of the 'IDENTIFIANT_SURVEIL' field.
-      * @param value The value of 'IDENTIFIANT_SURVEIL'.
+      * Sets the value of the 'totalAmount' field.
+      * @param value The value of 'totalAmount'.
       * @return This builder.
       */
-    public Order.Builder setIDENTIFIANTSURVEIL(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setTotalAmount(java.lang.CharSequence value) {
       validate(fields()[7], value);
-      this.IDENTIFIANT_SURVEIL = value;
+      this.totalAmount = value;
       fieldSetFlags()[7] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'IDENTIFIANT_SURVEIL' field has been set.
-      * @return True if the 'IDENTIFIANT_SURVEIL' field has been set, false otherwise.
+      * Checks whether the 'totalAmount' field has been set.
+      * @return True if the 'totalAmount' field has been set, false otherwise.
       */
-    public boolean hasIDENTIFIANTSURVEIL() {
+    public boolean hasTotalAmount() {
       return fieldSetFlags()[7];
     }
 
 
     /**
-      * Clears the value of the 'IDENTIFIANT_SURVEIL' field.
+      * Clears the value of the 'totalAmount' field.
       * @return This builder.
       */
-    public Order.Builder clearIDENTIFIANTSURVEIL() {
-      IDENTIFIANT_SURVEIL = null;
+    public com.dione.dto.Order.Builder clearTotalAmount() {
+      totalAmount = null;
       fieldSetFlags()[7] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'NBR_QUESTIONS' field.
+      * Gets the value of the 'currency' field.
       * @return The value.
       */
-    public java.lang.CharSequence getNBRQUESTIONS() {
-      return NBR_QUESTIONS;
+    public java.lang.CharSequence getCurrency() {
+      return currency;
     }
 
     /**
-      * Sets the value of the 'NBR_QUESTIONS' field.
-      * @param value The value of 'NBR_QUESTIONS'.
+      * Sets the value of the 'currency' field.
+      * @param value The value of 'currency'.
       * @return This builder.
       */
-    public Order.Builder setNBRQUESTIONS(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setCurrency(java.lang.CharSequence value) {
       validate(fields()[8], value);
-      this.NBR_QUESTIONS = value;
+      this.currency = value;
       fieldSetFlags()[8] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'NBR_QUESTIONS' field has been set.
-      * @return True if the 'NBR_QUESTIONS' field has been set, false otherwise.
+      * Checks whether the 'currency' field has been set.
+      * @return True if the 'currency' field has been set, false otherwise.
       */
-    public boolean hasNBRQUESTIONS() {
+    public boolean hasCurrency() {
       return fieldSetFlags()[8];
     }
 
 
     /**
-      * Clears the value of the 'NBR_QUESTIONS' field.
+      * Clears the value of the 'currency' field.
       * @return This builder.
       */
-    public Order.Builder clearNBRQUESTIONS() {
-      NBR_QUESTIONS = null;
+    public com.dione.dto.Order.Builder clearCurrency() {
+      currency = null;
       fieldSetFlags()[8] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'LNG_SURVEIL' field.
+      * Gets the value of the 'productId_1' field.
       * @return The value.
       */
-    public java.lang.CharSequence getLNGSURVEIL() {
-      return LNG_SURVEIL;
+    public java.lang.CharSequence getProductId1() {
+      return productId_1;
     }
 
     /**
-      * Sets the value of the 'LNG_SURVEIL' field.
-      * @param value The value of 'LNG_SURVEIL'.
+      * Sets the value of the 'productId_1' field.
+      * @param value The value of 'productId_1'.
       * @return This builder.
       */
-    public Order.Builder setLNGSURVEIL(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setProductId1(java.lang.CharSequence value) {
       validate(fields()[9], value);
-      this.LNG_SURVEIL = value;
+      this.productId_1 = value;
       fieldSetFlags()[9] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'LNG_SURVEIL' field has been set.
-      * @return True if the 'LNG_SURVEIL' field has been set, false otherwise.
+      * Checks whether the 'productId_1' field has been set.
+      * @return True if the 'productId_1' field has been set, false otherwise.
       */
-    public boolean hasLNGSURVEIL() {
+    public boolean hasProductId1() {
       return fieldSetFlags()[9];
     }
 
 
     /**
-      * Clears the value of the 'LNG_SURVEIL' field.
+      * Clears the value of the 'productId_1' field.
       * @return This builder.
       */
-    public Order.Builder clearLNGSURVEIL() {
-      LNG_SURVEIL = null;
+    public com.dione.dto.Order.Builder clearProductId1() {
+      productId_1 = null;
       fieldSetFlags()[9] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'MSG_ACCEUIL' field.
+      * Gets the value of the 'productName_1' field.
       * @return The value.
       */
-    public java.lang.CharSequence getMSGACCEUIL() {
-      return MSG_ACCEUIL;
+    public java.lang.CharSequence getProductName1() {
+      return productName_1;
     }
 
     /**
-      * Sets the value of the 'MSG_ACCEUIL' field.
-      * @param value The value of 'MSG_ACCEUIL'.
+      * Sets the value of the 'productName_1' field.
+      * @param value The value of 'productName_1'.
       * @return This builder.
       */
-    public Order.Builder setMSGACCEUIL(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setProductName1(java.lang.CharSequence value) {
       validate(fields()[10], value);
-      this.MSG_ACCEUIL = value;
+      this.productName_1 = value;
       fieldSetFlags()[10] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'MSG_ACCEUIL' field has been set.
-      * @return True if the 'MSG_ACCEUIL' field has been set, false otherwise.
+      * Checks whether the 'productName_1' field has been set.
+      * @return True if the 'productName_1' field has been set, false otherwise.
       */
-    public boolean hasMSGACCEUIL() {
+    public boolean hasProductName1() {
       return fieldSetFlags()[10];
     }
 
 
     /**
-      * Clears the value of the 'MSG_ACCEUIL' field.
+      * Clears the value of the 'productName_1' field.
       * @return This builder.
       */
-    public Order.Builder clearMSGACCEUIL() {
-      MSG_ACCEUIL = null;
+    public com.dione.dto.Order.Builder clearProductName1() {
+      productName_1 = null;
       fieldSetFlags()[10] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'MSG_CONCLUSION' field.
+      * Gets the value of the 'quantity_1' field.
       * @return The value.
       */
-    public java.lang.CharSequence getMSGCONCLUSION() {
-      return MSG_CONCLUSION;
+    public java.lang.CharSequence getQuantity1() {
+      return quantity_1;
     }
 
     /**
-      * Sets the value of the 'MSG_CONCLUSION' field.
-      * @param value The value of 'MSG_CONCLUSION'.
+      * Sets the value of the 'quantity_1' field.
+      * @param value The value of 'quantity_1'.
       * @return This builder.
       */
-    public Order.Builder setMSGCONCLUSION(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setQuantity1(java.lang.CharSequence value) {
       validate(fields()[11], value);
-      this.MSG_CONCLUSION = value;
+      this.quantity_1 = value;
       fieldSetFlags()[11] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'MSG_CONCLUSION' field has been set.
-      * @return True if the 'MSG_CONCLUSION' field has been set, false otherwise.
+      * Checks whether the 'quantity_1' field has been set.
+      * @return True if the 'quantity_1' field has been set, false otherwise.
       */
-    public boolean hasMSGCONCLUSION() {
+    public boolean hasQuantity1() {
       return fieldSetFlags()[11];
     }
 
 
     /**
-      * Clears the value of the 'MSG_CONCLUSION' field.
+      * Clears the value of the 'quantity_1' field.
       * @return This builder.
       */
-    public Order.Builder clearMSGCONCLUSION() {
-      MSG_CONCLUSION = null;
+    public com.dione.dto.Order.Builder clearQuantity1() {
+      quantity_1 = null;
       fieldSetFlags()[11] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'IDENTIFIANT_QX1' field.
+      * Gets the value of the 'price_1' field.
       * @return The value.
       */
-    public java.lang.CharSequence getIDENTIFIANTQX1() {
-      return IDENTIFIANT_QX1;
+    public java.lang.CharSequence getPrice1() {
+      return price_1;
     }
 
     /**
-      * Sets the value of the 'IDENTIFIANT_QX1' field.
-      * @param value The value of 'IDENTIFIANT_QX1'.
+      * Sets the value of the 'price_1' field.
+      * @param value The value of 'price_1'.
       * @return This builder.
       */
-    public Order.Builder setIDENTIFIANTQX1(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setPrice1(java.lang.CharSequence value) {
       validate(fields()[12], value);
-      this.IDENTIFIANT_QX1 = value;
+      this.price_1 = value;
       fieldSetFlags()[12] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'IDENTIFIANT_QX1' field has been set.
-      * @return True if the 'IDENTIFIANT_QX1' field has been set, false otherwise.
+      * Checks whether the 'price_1' field has been set.
+      * @return True if the 'price_1' field has been set, false otherwise.
       */
-    public boolean hasIDENTIFIANTQX1() {
+    public boolean hasPrice1() {
       return fieldSetFlags()[12];
     }
 
 
     /**
-      * Clears the value of the 'IDENTIFIANT_QX1' field.
+      * Clears the value of the 'price_1' field.
       * @return This builder.
       */
-    public Order.Builder clearIDENTIFIANTQX1() {
-      IDENTIFIANT_QX1 = null;
+    public com.dione.dto.Order.Builder clearPrice1() {
+      price_1 = null;
       fieldSetFlags()[12] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'NBR_CHOIX_Q1' field.
+      * Gets the value of the 'productId_2' field.
       * @return The value.
       */
-    public java.lang.CharSequence getNBRCHOIXQ1() {
-      return NBR_CHOIX_Q1;
+    public java.lang.CharSequence getProductId2() {
+      return productId_2;
     }
 
     /**
-      * Sets the value of the 'NBR_CHOIX_Q1' field.
-      * @param value The value of 'NBR_CHOIX_Q1'.
+      * Sets the value of the 'productId_2' field.
+      * @param value The value of 'productId_2'.
       * @return This builder.
       */
-    public Order.Builder setNBRCHOIXQ1(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setProductId2(java.lang.CharSequence value) {
       validate(fields()[13], value);
-      this.NBR_CHOIX_Q1 = value;
+      this.productId_2 = value;
       fieldSetFlags()[13] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'NBR_CHOIX_Q1' field has been set.
-      * @return True if the 'NBR_CHOIX_Q1' field has been set, false otherwise.
+      * Checks whether the 'productId_2' field has been set.
+      * @return True if the 'productId_2' field has been set, false otherwise.
       */
-    public boolean hasNBRCHOIXQ1() {
+    public boolean hasProductId2() {
       return fieldSetFlags()[13];
     }
 
 
     /**
-      * Clears the value of the 'NBR_CHOIX_Q1' field.
+      * Clears the value of the 'productId_2' field.
       * @return This builder.
       */
-    public Order.Builder clearNBRCHOIXQ1() {
-      NBR_CHOIX_Q1 = null;
+    public com.dione.dto.Order.Builder clearProductId2() {
+      productId_2 = null;
       fieldSetFlags()[13] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'IDENTIFIANT_QX2' field.
+      * Gets the value of the 'productName_2' field.
       * @return The value.
       */
-    public java.lang.CharSequence getIDENTIFIANTQX2() {
-      return IDENTIFIANT_QX2;
+    public java.lang.CharSequence getProductName2() {
+      return productName_2;
     }
 
     /**
-      * Sets the value of the 'IDENTIFIANT_QX2' field.
-      * @param value The value of 'IDENTIFIANT_QX2'.
+      * Sets the value of the 'productName_2' field.
+      * @param value The value of 'productName_2'.
       * @return This builder.
       */
-    public Order.Builder setIDENTIFIANTQX2(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setProductName2(java.lang.CharSequence value) {
       validate(fields()[14], value);
-      this.IDENTIFIANT_QX2 = value;
+      this.productName_2 = value;
       fieldSetFlags()[14] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'IDENTIFIANT_QX2' field has been set.
-      * @return True if the 'IDENTIFIANT_QX2' field has been set, false otherwise.
+      * Checks whether the 'productName_2' field has been set.
+      * @return True if the 'productName_2' field has been set, false otherwise.
       */
-    public boolean hasIDENTIFIANTQX2() {
+    public boolean hasProductName2() {
       return fieldSetFlags()[14];
     }
 
 
     /**
-      * Clears the value of the 'IDENTIFIANT_QX2' field.
+      * Clears the value of the 'productName_2' field.
       * @return This builder.
       */
-    public Order.Builder clearIDENTIFIANTQX2() {
-      IDENTIFIANT_QX2 = null;
+    public com.dione.dto.Order.Builder clearProductName2() {
+      productName_2 = null;
       fieldSetFlags()[14] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'NBR_CHOIX_Q2' field.
+      * Gets the value of the 'quantity_2' field.
       * @return The value.
       */
-    public java.lang.CharSequence getNBRCHOIXQ2() {
-      return NBR_CHOIX_Q2;
+    public java.lang.CharSequence getQuantity2() {
+      return quantity_2;
     }
 
     /**
-      * Sets the value of the 'NBR_CHOIX_Q2' field.
-      * @param value The value of 'NBR_CHOIX_Q2'.
+      * Sets the value of the 'quantity_2' field.
+      * @param value The value of 'quantity_2'.
       * @return This builder.
       */
-    public Order.Builder setNBRCHOIXQ2(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setQuantity2(java.lang.CharSequence value) {
       validate(fields()[15], value);
-      this.NBR_CHOIX_Q2 = value;
+      this.quantity_2 = value;
       fieldSetFlags()[15] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'NBR_CHOIX_Q2' field has been set.
-      * @return True if the 'NBR_CHOIX_Q2' field has been set, false otherwise.
+      * Checks whether the 'quantity_2' field has been set.
+      * @return True if the 'quantity_2' field has been set, false otherwise.
       */
-    public boolean hasNBRCHOIXQ2() {
+    public boolean hasQuantity2() {
       return fieldSetFlags()[15];
     }
 
 
     /**
-      * Clears the value of the 'NBR_CHOIX_Q2' field.
+      * Clears the value of the 'quantity_2' field.
       * @return This builder.
       */
-    public Order.Builder clearNBRCHOIXQ2() {
-      NBR_CHOIX_Q2 = null;
+    public com.dione.dto.Order.Builder clearQuantity2() {
+      quantity_2 = null;
       fieldSetFlags()[15] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'IDENTIFIANT_QX3' field.
+      * Gets the value of the 'price_2' field.
       * @return The value.
       */
-    public java.lang.CharSequence getIDENTIFIANTQX3() {
-      return IDENTIFIANT_QX3;
+    public java.lang.CharSequence getPrice2() {
+      return price_2;
     }
 
     /**
-      * Sets the value of the 'IDENTIFIANT_QX3' field.
-      * @param value The value of 'IDENTIFIANT_QX3'.
+      * Sets the value of the 'price_2' field.
+      * @param value The value of 'price_2'.
       * @return This builder.
       */
-    public Order.Builder setIDENTIFIANTQX3(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setPrice2(java.lang.CharSequence value) {
       validate(fields()[16], value);
-      this.IDENTIFIANT_QX3 = value;
+      this.price_2 = value;
       fieldSetFlags()[16] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'IDENTIFIANT_QX3' field has been set.
-      * @return True if the 'IDENTIFIANT_QX3' field has been set, false otherwise.
+      * Checks whether the 'price_2' field has been set.
+      * @return True if the 'price_2' field has been set, false otherwise.
       */
-    public boolean hasIDENTIFIANTQX3() {
+    public boolean hasPrice2() {
       return fieldSetFlags()[16];
     }
 
 
     /**
-      * Clears the value of the 'IDENTIFIANT_QX3' field.
+      * Clears the value of the 'price_2' field.
       * @return This builder.
       */
-    public Order.Builder clearIDENTIFIANTQX3() {
-      IDENTIFIANT_QX3 = null;
+    public com.dione.dto.Order.Builder clearPrice2() {
+      price_2 = null;
       fieldSetFlags()[16] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'NBR_CHOIX_Q3' field.
+      * Gets the value of the 'productId_3' field.
       * @return The value.
       */
-    public java.lang.CharSequence getNBRCHOIXQ3() {
-      return NBR_CHOIX_Q3;
+    public java.lang.CharSequence getProductId3() {
+      return productId_3;
     }
 
     /**
-      * Sets the value of the 'NBR_CHOIX_Q3' field.
-      * @param value The value of 'NBR_CHOIX_Q3'.
+      * Sets the value of the 'productId_3' field.
+      * @param value The value of 'productId_3'.
       * @return This builder.
       */
-    public Order.Builder setNBRCHOIXQ3(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setProductId3(java.lang.CharSequence value) {
       validate(fields()[17], value);
-      this.NBR_CHOIX_Q3 = value;
+      this.productId_3 = value;
       fieldSetFlags()[17] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'NBR_CHOIX_Q3' field has been set.
-      * @return True if the 'NBR_CHOIX_Q3' field has been set, false otherwise.
+      * Checks whether the 'productId_3' field has been set.
+      * @return True if the 'productId_3' field has been set, false otherwise.
       */
-    public boolean hasNBRCHOIXQ3() {
+    public boolean hasProductId3() {
       return fieldSetFlags()[17];
     }
 
 
     /**
-      * Clears the value of the 'NBR_CHOIX_Q3' field.
+      * Clears the value of the 'productId_3' field.
       * @return This builder.
       */
-    public Order.Builder clearNBRCHOIXQ3() {
-      NBR_CHOIX_Q3 = null;
+    public com.dione.dto.Order.Builder clearProductId3() {
+      productId_3 = null;
       fieldSetFlags()[17] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'IDENTIFIANT_QX4' field.
+      * Gets the value of the 'productName_3' field.
       * @return The value.
       */
-    public java.lang.CharSequence getIDENTIFIANTQX4() {
-      return IDENTIFIANT_QX4;
+    public java.lang.CharSequence getProductName3() {
+      return productName_3;
     }
 
     /**
-      * Sets the value of the 'IDENTIFIANT_QX4' field.
-      * @param value The value of 'IDENTIFIANT_QX4'.
+      * Sets the value of the 'productName_3' field.
+      * @param value The value of 'productName_3'.
       * @return This builder.
       */
-    public Order.Builder setIDENTIFIANTQX4(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setProductName3(java.lang.CharSequence value) {
       validate(fields()[18], value);
-      this.IDENTIFIANT_QX4 = value;
+      this.productName_3 = value;
       fieldSetFlags()[18] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'IDENTIFIANT_QX4' field has been set.
-      * @return True if the 'IDENTIFIANT_QX4' field has been set, false otherwise.
+      * Checks whether the 'productName_3' field has been set.
+      * @return True if the 'productName_3' field has been set, false otherwise.
       */
-    public boolean hasIDENTIFIANTQX4() {
+    public boolean hasProductName3() {
       return fieldSetFlags()[18];
     }
 
 
     /**
-      * Clears the value of the 'IDENTIFIANT_QX4' field.
+      * Clears the value of the 'productName_3' field.
       * @return This builder.
       */
-    public Order.Builder clearIDENTIFIANTQX4() {
-      IDENTIFIANT_QX4 = null;
+    public com.dione.dto.Order.Builder clearProductName3() {
+      productName_3 = null;
       fieldSetFlags()[18] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'NBR_CHOIX_Q4' field.
+      * Gets the value of the 'quantity_3' field.
       * @return The value.
       */
-    public java.lang.CharSequence getNBRCHOIXQ4() {
-      return NBR_CHOIX_Q4;
+    public java.lang.CharSequence getQuantity3() {
+      return quantity_3;
     }
 
     /**
-      * Sets the value of the 'NBR_CHOIX_Q4' field.
-      * @param value The value of 'NBR_CHOIX_Q4'.
+      * Sets the value of the 'quantity_3' field.
+      * @param value The value of 'quantity_3'.
       * @return This builder.
       */
-    public Order.Builder setNBRCHOIXQ4(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setQuantity3(java.lang.CharSequence value) {
       validate(fields()[19], value);
-      this.NBR_CHOIX_Q4 = value;
+      this.quantity_3 = value;
       fieldSetFlags()[19] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'NBR_CHOIX_Q4' field has been set.
-      * @return True if the 'NBR_CHOIX_Q4' field has been set, false otherwise.
+      * Checks whether the 'quantity_3' field has been set.
+      * @return True if the 'quantity_3' field has been set, false otherwise.
       */
-    public boolean hasNBRCHOIXQ4() {
+    public boolean hasQuantity3() {
       return fieldSetFlags()[19];
     }
 
 
     /**
-      * Clears the value of the 'NBR_CHOIX_Q4' field.
+      * Clears the value of the 'quantity_3' field.
       * @return This builder.
       */
-    public Order.Builder clearNBRCHOIXQ4() {
-      NBR_CHOIX_Q4 = null;
+    public com.dione.dto.Order.Builder clearQuantity3() {
+      quantity_3 = null;
       fieldSetFlags()[19] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'IDENTIFIANT_QX5' field.
+      * Gets the value of the 'price_3' field.
       * @return The value.
       */
-    public java.lang.CharSequence getIDENTIFIANTQX5() {
-      return IDENTIFIANT_QX5;
+    public java.lang.CharSequence getPrice3() {
+      return price_3;
     }
 
     /**
-      * Sets the value of the 'IDENTIFIANT_QX5' field.
-      * @param value The value of 'IDENTIFIANT_QX5'.
+      * Sets the value of the 'price_3' field.
+      * @param value The value of 'price_3'.
       * @return This builder.
       */
-    public Order.Builder setIDENTIFIANTQX5(java.lang.CharSequence value) {
+    public com.dione.dto.Order.Builder setPrice3(java.lang.CharSequence value) {
       validate(fields()[20], value);
-      this.IDENTIFIANT_QX5 = value;
+      this.price_3 = value;
       fieldSetFlags()[20] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'IDENTIFIANT_QX5' field has been set.
-      * @return True if the 'IDENTIFIANT_QX5' field has been set, false otherwise.
+      * Checks whether the 'price_3' field has been set.
+      * @return True if the 'price_3' field has been set, false otherwise.
       */
-    public boolean hasIDENTIFIANTQX5() {
+    public boolean hasPrice3() {
       return fieldSetFlags()[20];
     }
 
 
     /**
-      * Clears the value of the 'IDENTIFIANT_QX5' field.
+      * Clears the value of the 'price_3' field.
       * @return This builder.
       */
-    public Order.Builder clearIDENTIFIANTQX5() {
-      IDENTIFIANT_QX5 = null;
+    public com.dione.dto.Order.Builder clearPrice3() {
+      price_3 = null;
       fieldSetFlags()[20] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'NBR_CHOIX_Q5' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getNBRCHOIXQ5() {
-      return NBR_CHOIX_Q5;
-    }
-
-    /**
-      * Sets the value of the 'NBR_CHOIX_Q5' field.
-      * @param value The value of 'NBR_CHOIX_Q5'.
-      * @return This builder.
-      */
-    public Order.Builder setNBRCHOIXQ5(java.lang.CharSequence value) {
-      validate(fields()[21], value);
-      this.NBR_CHOIX_Q5 = value;
-      fieldSetFlags()[21] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'NBR_CHOIX_Q5' field has been set.
-      * @return True if the 'NBR_CHOIX_Q5' field has been set, false otherwise.
-      */
-    public boolean hasNBRCHOIXQ5() {
-      return fieldSetFlags()[21];
-    }
-
-
-    /**
-      * Clears the value of the 'NBR_CHOIX_Q5' field.
-      * @return This builder.
-      */
-    public Order.Builder clearNBRCHOIXQ5() {
-      NBR_CHOIX_Q5 = null;
-      fieldSetFlags()[21] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'IDENTIFIANT_QX6' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getIDENTIFIANTQX6() {
-      return IDENTIFIANT_QX6;
-    }
-
-    /**
-      * Sets the value of the 'IDENTIFIANT_QX6' field.
-      * @param value The value of 'IDENTIFIANT_QX6'.
-      * @return This builder.
-      */
-    public Order.Builder setIDENTIFIANTQX6(java.lang.CharSequence value) {
-      validate(fields()[22], value);
-      this.IDENTIFIANT_QX6 = value;
-      fieldSetFlags()[22] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'IDENTIFIANT_QX6' field has been set.
-      * @return True if the 'IDENTIFIANT_QX6' field has been set, false otherwise.
-      */
-    public boolean hasIDENTIFIANTQX6() {
-      return fieldSetFlags()[22];
-    }
-
-
-    /**
-      * Clears the value of the 'IDENTIFIANT_QX6' field.
-      * @return This builder.
-      */
-    public Order.Builder clearIDENTIFIANTQX6() {
-      IDENTIFIANT_QX6 = null;
-      fieldSetFlags()[22] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'NBR_CHOIX_Q6' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getNBRCHOIXQ6() {
-      return NBR_CHOIX_Q6;
-    }
-
-    /**
-      * Sets the value of the 'NBR_CHOIX_Q6' field.
-      * @param value The value of 'NBR_CHOIX_Q6'.
-      * @return This builder.
-      */
-    public Order.Builder setNBRCHOIXQ6(java.lang.CharSequence value) {
-      validate(fields()[23], value);
-      this.NBR_CHOIX_Q6 = value;
-      fieldSetFlags()[23] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'NBR_CHOIX_Q6' field has been set.
-      * @return True if the 'NBR_CHOIX_Q6' field has been set, false otherwise.
-      */
-    public boolean hasNBRCHOIXQ6() {
-      return fieldSetFlags()[23];
-    }
-
-
-    /**
-      * Clears the value of the 'NBR_CHOIX_Q6' field.
-      * @return This builder.
-      */
-    public Order.Builder clearNBRCHOIXQ6() {
-      NBR_CHOIX_Q6 = null;
-      fieldSetFlags()[23] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'IDENTIFIANT_QX7' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getIDENTIFIANTQX7() {
-      return IDENTIFIANT_QX7;
-    }
-
-    /**
-      * Sets the value of the 'IDENTIFIANT_QX7' field.
-      * @param value The value of 'IDENTIFIANT_QX7'.
-      * @return This builder.
-      */
-    public Order.Builder setIDENTIFIANTQX7(java.lang.CharSequence value) {
-      validate(fields()[24], value);
-      this.IDENTIFIANT_QX7 = value;
-      fieldSetFlags()[24] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'IDENTIFIANT_QX7' field has been set.
-      * @return True if the 'IDENTIFIANT_QX7' field has been set, false otherwise.
-      */
-    public boolean hasIDENTIFIANTQX7() {
-      return fieldSetFlags()[24];
-    }
-
-
-    /**
-      * Clears the value of the 'IDENTIFIANT_QX7' field.
-      * @return This builder.
-      */
-    public Order.Builder clearIDENTIFIANTQX7() {
-      IDENTIFIANT_QX7 = null;
-      fieldSetFlags()[24] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'NBR_CHOIX_Q7' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getNBRCHOIXQ7() {
-      return NBR_CHOIX_Q7;
-    }
-
-    /**
-      * Sets the value of the 'NBR_CHOIX_Q7' field.
-      * @param value The value of 'NBR_CHOIX_Q7'.
-      * @return This builder.
-      */
-    public Order.Builder setNBRCHOIXQ7(java.lang.CharSequence value) {
-      validate(fields()[25], value);
-      this.NBR_CHOIX_Q7 = value;
-      fieldSetFlags()[25] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'NBR_CHOIX_Q7' field has been set.
-      * @return True if the 'NBR_CHOIX_Q7' field has been set, false otherwise.
-      */
-    public boolean hasNBRCHOIXQ7() {
-      return fieldSetFlags()[25];
-    }
-
-
-    /**
-      * Clears the value of the 'NBR_CHOIX_Q7' field.
-      * @return This builder.
-      */
-    public Order.Builder clearNBRCHOIXQ7() {
-      NBR_CHOIX_Q7 = null;
-      fieldSetFlags()[25] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'externalDataReference' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getExternalDataReference() {
-      return externalDataReference;
-    }
-
-    /**
-      * Sets the value of the 'externalDataReference' field.
-      * @param value The value of 'externalDataReference'.
-      * @return This builder.
-      */
-    public Order.Builder setExternalDataReference(java.lang.CharSequence value) {
-      validate(fields()[26], value);
-      this.externalDataReference = value;
-      fieldSetFlags()[26] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'externalDataReference' field has been set.
-      * @return True if the 'externalDataReference' field has been set, false otherwise.
-      */
-    public boolean hasExternalDataReference() {
-      return fieldSetFlags()[26];
-    }
-
-
-    /**
-      * Clears the value of the 'externalDataReference' field.
-      * @return This builder.
-      */
-    public Order.Builder clearExternalDataReference() {
-      externalDataReference = null;
-      fieldSetFlags()[26] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'recipientEmail' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getRecipientEmail() {
-      return recipientEmail;
-    }
-
-    /**
-      * Sets the value of the 'recipientEmail' field.
-      * @param value The value of 'recipientEmail'.
-      * @return This builder.
-      */
-    public Order.Builder setRecipientEmail(java.lang.CharSequence value) {
-      validate(fields()[27], value);
-      this.recipientEmail = value;
-      fieldSetFlags()[27] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'recipientEmail' field has been set.
-      * @return True if the 'recipientEmail' field has been set, false otherwise.
-      */
-    public boolean hasRecipientEmail() {
-      return fieldSetFlags()[27];
-    }
-
-
-    /**
-      * Clears the value of the 'recipientEmail' field.
-      * @return This builder.
-      */
-    public Order.Builder clearRecipientEmail() {
-      recipientEmail = null;
-      fieldSetFlags()[27] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'distributionChannel' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getDistributionChannel() {
-      return distributionChannel;
-    }
-
-    /**
-      * Sets the value of the 'distributionChannel' field.
-      * @param value The value of 'distributionChannel'.
-      * @return This builder.
-      */
-    public Order.Builder setDistributionChannel(java.lang.CharSequence value) {
-      validate(fields()[28], value);
-      this.distributionChannel = value;
-      fieldSetFlags()[28] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'distributionChannel' field has been set.
-      * @return True if the 'distributionChannel' field has been set, false otherwise.
-      */
-    public boolean hasDistributionChannel() {
-      return fieldSetFlags()[28];
-    }
-
-
-    /**
-      * Clears the value of the 'distributionChannel' field.
-      * @return This builder.
-      */
-    public Order.Builder clearDistributionChannel() {
-      distributionChannel = null;
-      fieldSetFlags()[28] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'XMContactID' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getXMContactID() {
-      return XMContactID;
-    }
-
-    /**
-      * Sets the value of the 'XMContactID' field.
-      * @param value The value of 'XMContactID'.
-      * @return This builder.
-      */
-    public Order.Builder setXMContactID(java.lang.CharSequence value) {
-      validate(fields()[29], value);
-      this.XMContactID = value;
-      fieldSetFlags()[29] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'XMContactID' field has been set.
-      * @return True if the 'XMContactID' field has been set, false otherwise.
-      */
-    public boolean hasXMContactID() {
-      return fieldSetFlags()[29];
-    }
-
-
-    /**
-      * Clears the value of the 'XMContactID' field.
-      * @return This builder.
-      */
-    public Order.Builder clearXMContactID() {
-      XMContactID = null;
-      fieldSetFlags()[29] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'canal_interaction_client' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getCanalInteractionClient() {
-      return canal_interaction_client;
-    }
-
-    /**
-      * Sets the value of the 'canal_interaction_client' field.
-      * @param value The value of 'canal_interaction_client'.
-      * @return This builder.
-      */
-    public Order.Builder setCanalInteractionClient(java.lang.CharSequence value) {
-      validate(fields()[30], value);
-      this.canal_interaction_client = value;
-      fieldSetFlags()[30] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'canal_interaction_client' field has been set.
-      * @return True if the 'canal_interaction_client' field has been set, false otherwise.
-      */
-    public boolean hasCanalInteractionClient() {
-      return fieldSetFlags()[30];
-    }
-
-
-    /**
-      * Clears the value of the 'canal_interaction_client' field.
-      * @return This builder.
-      */
-    public Order.Builder clearCanalInteractionClient() {
-      canal_interaction_client = null;
-      fieldSetFlags()[30] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'code_distributeur' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getCodeDistributeur() {
-      return code_distributeur;
-    }
-
-    /**
-      * Sets the value of the 'code_distributeur' field.
-      * @param value The value of 'code_distributeur'.
-      * @return This builder.
-      */
-    public Order.Builder setCodeDistributeur(java.lang.CharSequence value) {
-      validate(fields()[31], value);
-      this.code_distributeur = value;
-      fieldSetFlags()[31] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'code_distributeur' field has been set.
-      * @return True if the 'code_distributeur' field has been set, false otherwise.
-      */
-    public boolean hasCodeDistributeur() {
-      return fieldSetFlags()[31];
-    }
-
-
-    /**
-      * Clears the value of the 'code_distributeur' field.
-      * @return This builder.
-      */
-    public Order.Builder clearCodeDistributeur() {
-      code_distributeur = null;
-      fieldSetFlags()[31] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'code_pdv' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getCodePdv() {
-      return code_pdv;
-    }
-
-    /**
-      * Sets the value of the 'code_pdv' field.
-      * @param value The value of 'code_pdv'.
-      * @return This builder.
-      */
-    public Order.Builder setCodePdv(java.lang.CharSequence value) {
-      validate(fields()[32], value);
-      this.code_pdv = value;
-      fieldSetFlags()[32] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'code_pdv' field has been set.
-      * @return True if the 'code_pdv' field has been set, false otherwise.
-      */
-    public boolean hasCodePdv() {
-      return fieldSetFlags()[32];
-    }
-
-
-    /**
-      * Clears the value of the 'code_pdv' field.
-      * @return This builder.
-      */
-    public Order.Builder clearCodePdv() {
-      code_pdv = null;
-      fieldSetFlags()[32] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'id_commande' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getIdCommande() {
-      return id_commande;
-    }
-
-    /**
-      * Sets the value of the 'id_commande' field.
-      * @param value The value of 'id_commande'.
-      * @return This builder.
-      */
-    public Order.Builder setIdCommande(java.lang.CharSequence value) {
-      validate(fields()[33], value);
-      this.id_commande = value;
-      fieldSetFlags()[33] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'id_commande' field has been set.
-      * @return True if the 'id_commande' field has been set, false otherwise.
-      */
-    public boolean hasIdCommande() {
-      return fieldSetFlags()[33];
-    }
-
-
-    /**
-      * Clears the value of the 'id_commande' field.
-      * @return This builder.
-      */
-    public Order.Builder clearIdCommande() {
-      id_commande = null;
-      fieldSetFlags()[33] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'id_action' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getIdAction() {
-      return id_action;
-    }
-
-    /**
-      * Sets the value of the 'id_action' field.
-      * @param value The value of 'id_action'.
-      * @return This builder.
-      */
-    public Order.Builder setIdAction(java.lang.CharSequence value) {
-      validate(fields()[34], value);
-      this.id_action = value;
-      fieldSetFlags()[34] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'id_action' field has been set.
-      * @return True if the 'id_action' field has been set, false otherwise.
-      */
-    public boolean hasIdAction() {
-      return fieldSetFlags()[34];
-    }
-
-
-    /**
-      * Clears the value of the 'id_action' field.
-      * @return This builder.
-      */
-    public Order.Builder clearIdAction() {
-      id_action = null;
-      fieldSetFlags()[34] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'id_demande_identification' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getIdDemandeIdentification() {
-      return id_demande_identification;
-    }
-
-    /**
-      * Sets the value of the 'id_demande_identification' field.
-      * @param value The value of 'id_demande_identification'.
-      * @return This builder.
-      */
-    public Order.Builder setIdDemandeIdentification(java.lang.CharSequence value) {
-      validate(fields()[35], value);
-      this.id_demande_identification = value;
-      fieldSetFlags()[35] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'id_demande_identification' field has been set.
-      * @return True if the 'id_demande_identification' field has been set, false otherwise.
-      */
-    public boolean hasIdDemandeIdentification() {
-      return fieldSetFlags()[35];
-    }
-
-
-    /**
-      * Clears the value of the 'id_demande_identification' field.
-      * @return This builder.
-      */
-    public Order.Builder clearIdDemandeIdentification() {
-      id_demande_identification = null;
-      fieldSetFlags()[35] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'id_demande_resiliation' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getIdDemandeResiliation() {
-      return id_demande_resiliation;
-    }
-
-    /**
-      * Sets the value of the 'id_demande_resiliation' field.
-      * @param value The value of 'id_demande_resiliation'.
-      * @return This builder.
-      */
-    public Order.Builder setIdDemandeResiliation(java.lang.CharSequence value) {
-      validate(fields()[36], value);
-      this.id_demande_resiliation = value;
-      fieldSetFlags()[36] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'id_demande_resiliation' field has been set.
-      * @return True if the 'id_demande_resiliation' field has been set, false otherwise.
-      */
-    public boolean hasIdDemandeResiliation() {
-      return fieldSetFlags()[36];
-    }
-
-
-    /**
-      * Clears the value of the 'id_demande_resiliation' field.
-      * @return This builder.
-      */
-    public Order.Builder clearIdDemandeResiliation() {
-      id_demande_resiliation = null;
-      fieldSetFlags()[36] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'id_case' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getIdCase() {
-      return id_case;
-    }
-
-    /**
-      * Sets the value of the 'id_case' field.
-      * @param value The value of 'id_case'.
-      * @return This builder.
-      */
-    public Order.Builder setIdCase(java.lang.CharSequence value) {
-      validate(fields()[37], value);
-      this.id_case = value;
-      fieldSetFlags()[37] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'id_case' field has been set.
-      * @return True if the 'id_case' field has been set, false otherwise.
-      */
-    public boolean hasIdCase() {
-      return fieldSetFlags()[37];
-    }
-
-
-    /**
-      * Clears the value of the 'id_case' field.
-      * @return This builder.
-      */
-    public Order.Builder clearIdCase() {
-      id_case = null;
-      fieldSetFlags()[37] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'id_user_interaction' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getIdUserInteraction() {
-      return id_user_interaction;
-    }
-
-    /**
-      * Sets the value of the 'id_user_interaction' field.
-      * @param value The value of 'id_user_interaction'.
-      * @return This builder.
-      */
-    public Order.Builder setIdUserInteraction(java.lang.CharSequence value) {
-      validate(fields()[38], value);
-      this.id_user_interaction = value;
-      fieldSetFlags()[38] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'id_user_interaction' field has been set.
-      * @return True if the 'id_user_interaction' field has been set, false otherwise.
-      */
-    public boolean hasIdUserInteraction() {
-      return fieldSetFlags()[38];
-    }
-
-
-    /**
-      * Clears the value of the 'id_user_interaction' field.
-      * @return This builder.
-      */
-    public Order.Builder clearIdUserInteraction() {
-      id_user_interaction = null;
-      fieldSetFlags()[38] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'statut_case' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getStatutCase() {
-      return statut_case;
-    }
-
-    /**
-      * Sets the value of the 'statut_case' field.
-      * @param value The value of 'statut_case'.
-      * @return This builder.
-      */
-    public Order.Builder setStatutCase(java.lang.CharSequence value) {
-      validate(fields()[39], value);
-      this.statut_case = value;
-      fieldSetFlags()[39] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'statut_case' field has been set.
-      * @return True if the 'statut_case' field has been set, false otherwise.
-      */
-    public boolean hasStatutCase() {
-      return fieldSetFlags()[39];
-    }
-
-
-    /**
-      * Clears the value of the 'statut_case' field.
-      * @return This builder.
-      */
-    public Order.Builder clearStatutCase() {
-      statut_case = null;
-      fieldSetFlags()[39] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'interaction_client' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getInteractionClient() {
-      return interaction_client;
-    }
-
-    /**
-      * Sets the value of the 'interaction_client' field.
-      * @param value The value of 'interaction_client'.
-      * @return This builder.
-      */
-    public Order.Builder setInteractionClient(java.lang.CharSequence value) {
-      validate(fields()[40], value);
-      this.interaction_client = value;
-      fieldSetFlags()[40] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'interaction_client' field has been set.
-      * @return True if the 'interaction_client' field has been set, false otherwise.
-      */
-    public boolean hasInteractionClient() {
-      return fieldSetFlags()[40];
-    }
-
-
-    /**
-      * Clears the value of the 'interaction_client' field.
-      * @return This builder.
-      */
-    public Order.Builder clearInteractionClient() {
-      interaction_client = null;
-      fieldSetFlags()[40] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'numero_appelant' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getNumeroAppelant() {
-      return numero_appelant;
-    }
-
-    /**
-      * Sets the value of the 'numero_appelant' field.
-      * @param value The value of 'numero_appelant'.
-      * @return This builder.
-      */
-    public Order.Builder setNumeroAppelant(java.lang.CharSequence value) {
-      validate(fields()[41], value);
-      this.numero_appelant = value;
-      fieldSetFlags()[41] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'numero_appelant' field has been set.
-      * @return True if the 'numero_appelant' field has been set, false otherwise.
-      */
-    public boolean hasNumeroAppelant() {
-      return fieldSetFlags()[41];
-    }
-
-
-    /**
-      * Clears the value of the 'numero_appelant' field.
-      * @return This builder.
-      */
-    public Order.Builder clearNumeroAppelant() {
-      numero_appelant = null;
-      fieldSetFlags()[41] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'numero_client' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getNumeroClient() {
-      return numero_client;
-    }
-
-    /**
-      * Sets the value of the 'numero_client' field.
-      * @param value The value of 'numero_client'.
-      * @return This builder.
-      */
-    public Order.Builder setNumeroClient(java.lang.CharSequence value) {
-      validate(fields()[42], value);
-      this.numero_client = value;
-      fieldSetFlags()[42] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'numero_client' field has been set.
-      * @return True if the 'numero_client' field has been set, false otherwise.
-      */
-    public boolean hasNumeroClient() {
-      return fieldSetFlags()[42];
-    }
-
-
-    /**
-      * Clears the value of the 'numero_client' field.
-      * @return This builder.
-      */
-    public Order.Builder clearNumeroClient() {
-      numero_client = null;
-      fieldSetFlags()[42] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'numero_contact_client' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getNumeroContactClient() {
-      return numero_contact_client;
-    }
-
-    /**
-      * Sets the value of the 'numero_contact_client' field.
-      * @param value The value of 'numero_contact_client'.
-      * @return This builder.
-      */
-    public Order.Builder setNumeroContactClient(java.lang.CharSequence value) {
-      validate(fields()[43], value);
-      this.numero_contact_client = value;
-      fieldSetFlags()[43] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'numero_contact_client' field has been set.
-      * @return True if the 'numero_contact_client' field has been set, false otherwise.
-      */
-    public boolean hasNumeroContactClient() {
-      return fieldSetFlags()[43];
-    }
-
-
-    /**
-      * Clears the value of the 'numero_contact_client' field.
-      * @return This builder.
-      */
-    public Order.Builder clearNumeroContactClient() {
-      numero_contact_client = null;
-      fieldSetFlags()[43] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'offre' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getOffre() {
-      return offre;
-    }
-
-    /**
-      * Sets the value of the 'offre' field.
-      * @param value The value of 'offre'.
-      * @return This builder.
-      */
-    public Order.Builder setOffre(java.lang.CharSequence value) {
-      validate(fields()[44], value);
-      this.offre = value;
-      fieldSetFlags()[44] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'offre' field has been set.
-      * @return True if the 'offre' field has been set, false otherwise.
-      */
-    public boolean hasOffre() {
-      return fieldSetFlags()[44];
-    }
-
-
-    /**
-      * Clears the value of the 'offre' field.
-      * @return This builder.
-      */
-    public Order.Builder clearOffre() {
-      offre = null;
-      fieldSetFlags()[44] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'ville_partenaire' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getVillePartenaire() {
-      return ville_partenaire;
-    }
-
-    /**
-      * Sets the value of the 'ville_partenaire' field.
-      * @param value The value of 'ville_partenaire'.
-      * @return This builder.
-      */
-    public Order.Builder setVillePartenaire(java.lang.CharSequence value) {
-      validate(fields()[45], value);
-      this.ville_partenaire = value;
-      fieldSetFlags()[45] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'ville_partenaire' field has been set.
-      * @return True if the 'ville_partenaire' field has been set, false otherwise.
-      */
-    public boolean hasVillePartenaire() {
-      return fieldSetFlags()[45];
-    }
-
-
-    /**
-      * Clears the value of the 'ville_partenaire' field.
-      * @return This builder.
-      */
-    public Order.Builder clearVillePartenaire() {
-      ville_partenaire = null;
-      fieldSetFlags()[45] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'prestataire' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getPrestataire() {
-      return prestataire;
-    }
-
-    /**
-      * Sets the value of the 'prestataire' field.
-      * @param value The value of 'prestataire'.
-      * @return This builder.
-      */
-    public Order.Builder setPrestataire(java.lang.CharSequence value) {
-      validate(fields()[46], value);
-      this.prestataire = value;
-      fieldSetFlags()[46] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'prestataire' field has been set.
-      * @return True if the 'prestataire' field has been set, false otherwise.
-      */
-    public boolean hasPrestataire() {
-      return fieldSetFlags()[46];
-    }
-
-
-    /**
-      * Clears the value of the 'prestataire' field.
-      * @return This builder.
-      */
-    public Order.Builder clearPrestataire() {
-      prestataire = null;
-      fieldSetFlags()[46] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'id_profil' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getIdProfil() {
-      return id_profil;
-    }
-
-    /**
-      * Sets the value of the 'id_profil' field.
-      * @param value The value of 'id_profil'.
-      * @return This builder.
-      */
-    public Order.Builder setIdProfil(java.lang.CharSequence value) {
-      validate(fields()[47], value);
-      this.id_profil = value;
-      fieldSetFlags()[47] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'id_profil' field has been set.
-      * @return True if the 'id_profil' field has been set, false otherwise.
-      */
-    public boolean hasIdProfil() {
-      return fieldSetFlags()[47];
-    }
-
-
-    /**
-      * Clears the value of the 'id_profil' field.
-      * @return This builder.
-      */
-    public Order.Builder clearIdProfil() {
-      id_profil = null;
-      fieldSetFlags()[47] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'source_contact' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getSourceContact() {
-      return source_contact;
-    }
-
-    /**
-      * Sets the value of the 'source_contact' field.
-      * @param value The value of 'source_contact'.
-      * @return This builder.
-      */
-    public Order.Builder setSourceContact(java.lang.CharSequence value) {
-      validate(fields()[48], value);
-      this.source_contact = value;
-      fieldSetFlags()[48] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'source_contact' field has been set.
-      * @return True if the 'source_contact' field has been set, false otherwise.
-      */
-    public boolean hasSourceContact() {
-      return fieldSetFlags()[48];
-    }
-
-
-    /**
-      * Clears the value of the 'source_contact' field.
-      * @return This builder.
-      */
-    public Order.Builder clearSourceContact() {
-      source_contact = null;
-      fieldSetFlags()[48] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'type_interaction_crm' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getTypeInteractionCrm() {
-      return type_interaction_crm;
-    }
-
-    /**
-      * Sets the value of the 'type_interaction_crm' field.
-      * @param value The value of 'type_interaction_crm'.
-      * @return This builder.
-      */
-    public Order.Builder setTypeInteractionCrm(java.lang.CharSequence value) {
-      validate(fields()[49], value);
-      this.type_interaction_crm = value;
-      fieldSetFlags()[49] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'type_interaction_crm' field has been set.
-      * @return True if the 'type_interaction_crm' field has been set, false otherwise.
-      */
-    public boolean hasTypeInteractionCrm() {
-      return fieldSetFlags()[49];
-    }
-
-
-    /**
-      * Clears the value of the 'type_interaction_crm' field.
-      * @return This builder.
-      */
-    public Order.Builder clearTypeInteractionCrm() {
-      type_interaction_crm = null;
-      fieldSetFlags()[49] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'type_offre' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getTypeOffre() {
-      return type_offre;
-    }
-
-    /**
-      * Sets the value of the 'type_offre' field.
-      * @param value The value of 'type_offre'.
-      * @return This builder.
-      */
-    public Order.Builder setTypeOffre(java.lang.CharSequence value) {
-      validate(fields()[50], value);
-      this.type_offre = value;
-      fieldSetFlags()[50] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'type_offre' field has been set.
-      * @return True if the 'type_offre' field has been set, false otherwise.
-      */
-    public boolean hasTypeOffre() {
-      return fieldSetFlags()[50];
-    }
-
-
-    /**
-      * Clears the value of the 'type_offre' field.
-      * @return This builder.
-      */
-    public Order.Builder clearTypeOffre() {
-      type_offre = null;
-      fieldSetFlags()[50] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'date_interaction_crm' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getDateInteractionCrm() {
-      return date_interaction_crm;
-    }
-
-    /**
-      * Sets the value of the 'date_interaction_crm' field.
-      * @param value The value of 'date_interaction_crm'.
-      * @return This builder.
-      */
-    public Order.Builder setDateInteractionCrm(java.lang.CharSequence value) {
-      validate(fields()[51], value);
-      this.date_interaction_crm = value;
-      fieldSetFlags()[51] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'date_interaction_crm' field has been set.
-      * @return True if the 'date_interaction_crm' field has been set, false otherwise.
-      */
-    public boolean hasDateInteractionCrm() {
-      return fieldSetFlags()[51];
-    }
-
-
-    /**
-      * Clears the value of the 'date_interaction_crm' field.
-      * @return This builder.
-      */
-    public Order.Builder clearDateInteractionCrm() {
-      date_interaction_crm = null;
-      fieldSetFlags()[51] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'id_client' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getIdClient() {
-      return id_client;
-    }
-
-    /**
-      * Sets the value of the 'id_client' field.
-      * @param value The value of 'id_client'.
-      * @return This builder.
-      */
-    public Order.Builder setIdClient(java.lang.CharSequence value) {
-      validate(fields()[52], value);
-      this.id_client = value;
-      fieldSetFlags()[52] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'id_client' field has been set.
-      * @return True if the 'id_client' field has been set, false otherwise.
-      */
-    public boolean hasIdClient() {
-      return fieldSetFlags()[52];
-    }
-
-
-    /**
-      * Clears the value of the 'id_client' field.
-      * @return This builder.
-      */
-    public Order.Builder clearIdClient() {
-      id_client = null;
-      fieldSetFlags()[52] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'region_partenaire' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getRegionPartenaire() {
-      return region_partenaire;
-    }
-
-    /**
-      * Sets the value of the 'region_partenaire' field.
-      * @param value The value of 'region_partenaire'.
-      * @return This builder.
-      */
-    public Order.Builder setRegionPartenaire(java.lang.CharSequence value) {
-      validate(fields()[53], value);
-      this.region_partenaire = value;
-      fieldSetFlags()[53] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'region_partenaire' field has been set.
-      * @return True if the 'region_partenaire' field has been set, false otherwise.
-      */
-    public boolean hasRegionPartenaire() {
-      return fieldSetFlags()[53];
-    }
-
-
-    /**
-      * Clears the value of the 'region_partenaire' field.
-      * @return This builder.
-      */
-    public Order.Builder clearRegionPartenaire() {
-      region_partenaire = null;
-      fieldSetFlags()[53] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'ancienete_ligne' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getAncieneteLigne() {
-      return ancienete_ligne;
-    }
-
-    /**
-      * Sets the value of the 'ancienete_ligne' field.
-      * @param value The value of 'ancienete_ligne'.
-      * @return This builder.
-      */
-    public Order.Builder setAncieneteLigne(java.lang.CharSequence value) {
-      validate(fields()[54], value);
-      this.ancienete_ligne = value;
-      fieldSetFlags()[54] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'ancienete_ligne' field has been set.
-      * @return True if the 'ancienete_ligne' field has been set, false otherwise.
-      */
-    public boolean hasAncieneteLigne() {
-      return fieldSetFlags()[54];
-    }
-
-
-    /**
-      * Clears the value of the 'ancienete_ligne' field.
-      * @return This builder.
-      */
-    public Order.Builder clearAncieneteLigne() {
-      ancienete_ligne = null;
-      fieldSetFlags()[54] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'login_rvr' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getLoginRvr() {
-      return login_rvr;
-    }
-
-    /**
-      * Sets the value of the 'login_rvr' field.
-      * @param value The value of 'login_rvr'.
-      * @return This builder.
-      */
-    public Order.Builder setLoginRvr(java.lang.CharSequence value) {
-      validate(fields()[55], value);
-      this.login_rvr = value;
-      fieldSetFlags()[55] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'login_rvr' field has been set.
-      * @return True if the 'login_rvr' field has been set, false otherwise.
-      */
-    public boolean hasLoginRvr() {
-      return fieldSetFlags()[55];
-    }
-
-
-    /**
-      * Clears the value of the 'login_rvr' field.
-      * @return This builder.
-      */
-    public Order.Builder clearLoginRvr() {
-      login_rvr = null;
-      fieldSetFlags()[55] = false;
       return this;
     }
 
@@ -4004,62 +1589,27 @@ public class Order extends org.apache.avro.specific.SpecificRecordBase implement
     public Order build() {
       try {
         Order record = new Order();
-        record.GSW_PHONE = fieldSetFlags()[0] ? this.GSW_PHONE : (java.lang.CharSequence) defaultValue(fields()[0]);
-        record.GSW_AGENT_REQ_TYPE = fieldSetFlags()[1] ? this.GSW_AGENT_REQ_TYPE : (java.lang.CharSequence) defaultValue(fields()[1]);
-        record.GSW_CALLING_LIST = fieldSetFlags()[2] ? this.GSW_CALLING_LIST : (java.lang.CharSequence) defaultValue(fields()[2]);
-        record.GSW_TZ_NAME = fieldSetFlags()[3] ? this.GSW_TZ_NAME : (java.lang.CharSequence) defaultValue(fields()[3]);
-        record.GSW_CAMPAIGN_NAME = fieldSetFlags()[4] ? this.GSW_CAMPAIGN_NAME : (java.lang.CharSequence) defaultValue(fields()[4]);
-        record.GSW_FROM = fieldSetFlags()[5] ? this.GSW_FROM : (java.lang.CharSequence) defaultValue(fields()[5]);
-        record.GSW_UNTIL = fieldSetFlags()[6] ? this.GSW_UNTIL : (java.lang.CharSequence) defaultValue(fields()[6]);
-        record.IDENTIFIANT_SURVEIL = fieldSetFlags()[7] ? this.IDENTIFIANT_SURVEIL : (java.lang.CharSequence) defaultValue(fields()[7]);
-        record.NBR_QUESTIONS = fieldSetFlags()[8] ? this.NBR_QUESTIONS : (java.lang.CharSequence) defaultValue(fields()[8]);
-        record.LNG_SURVEIL = fieldSetFlags()[9] ? this.LNG_SURVEIL : (java.lang.CharSequence) defaultValue(fields()[9]);
-        record.MSG_ACCEUIL = fieldSetFlags()[10] ? this.MSG_ACCEUIL : (java.lang.CharSequence) defaultValue(fields()[10]);
-        record.MSG_CONCLUSION = fieldSetFlags()[11] ? this.MSG_CONCLUSION : (java.lang.CharSequence) defaultValue(fields()[11]);
-        record.IDENTIFIANT_QX1 = fieldSetFlags()[12] ? this.IDENTIFIANT_QX1 : (java.lang.CharSequence) defaultValue(fields()[12]);
-        record.NBR_CHOIX_Q1 = fieldSetFlags()[13] ? this.NBR_CHOIX_Q1 : (java.lang.CharSequence) defaultValue(fields()[13]);
-        record.IDENTIFIANT_QX2 = fieldSetFlags()[14] ? this.IDENTIFIANT_QX2 : (java.lang.CharSequence) defaultValue(fields()[14]);
-        record.NBR_CHOIX_Q2 = fieldSetFlags()[15] ? this.NBR_CHOIX_Q2 : (java.lang.CharSequence) defaultValue(fields()[15]);
-        record.IDENTIFIANT_QX3 = fieldSetFlags()[16] ? this.IDENTIFIANT_QX3 : (java.lang.CharSequence) defaultValue(fields()[16]);
-        record.NBR_CHOIX_Q3 = fieldSetFlags()[17] ? this.NBR_CHOIX_Q3 : (java.lang.CharSequence) defaultValue(fields()[17]);
-        record.IDENTIFIANT_QX4 = fieldSetFlags()[18] ? this.IDENTIFIANT_QX4 : (java.lang.CharSequence) defaultValue(fields()[18]);
-        record.NBR_CHOIX_Q4 = fieldSetFlags()[19] ? this.NBR_CHOIX_Q4 : (java.lang.CharSequence) defaultValue(fields()[19]);
-        record.IDENTIFIANT_QX5 = fieldSetFlags()[20] ? this.IDENTIFIANT_QX5 : (java.lang.CharSequence) defaultValue(fields()[20]);
-        record.NBR_CHOIX_Q5 = fieldSetFlags()[21] ? this.NBR_CHOIX_Q5 : (java.lang.CharSequence) defaultValue(fields()[21]);
-        record.IDENTIFIANT_QX6 = fieldSetFlags()[22] ? this.IDENTIFIANT_QX6 : (java.lang.CharSequence) defaultValue(fields()[22]);
-        record.NBR_CHOIX_Q6 = fieldSetFlags()[23] ? this.NBR_CHOIX_Q6 : (java.lang.CharSequence) defaultValue(fields()[23]);
-        record.IDENTIFIANT_QX7 = fieldSetFlags()[24] ? this.IDENTIFIANT_QX7 : (java.lang.CharSequence) defaultValue(fields()[24]);
-        record.NBR_CHOIX_Q7 = fieldSetFlags()[25] ? this.NBR_CHOIX_Q7 : (java.lang.CharSequence) defaultValue(fields()[25]);
-        record.externalDataReference = fieldSetFlags()[26] ? this.externalDataReference : (java.lang.CharSequence) defaultValue(fields()[26]);
-        record.recipientEmail = fieldSetFlags()[27] ? this.recipientEmail : (java.lang.CharSequence) defaultValue(fields()[27]);
-        record.distributionChannel = fieldSetFlags()[28] ? this.distributionChannel : (java.lang.CharSequence) defaultValue(fields()[28]);
-        record.XMContactID = fieldSetFlags()[29] ? this.XMContactID : (java.lang.CharSequence) defaultValue(fields()[29]);
-        record.canal_interaction_client = fieldSetFlags()[30] ? this.canal_interaction_client : (java.lang.CharSequence) defaultValue(fields()[30]);
-        record.code_distributeur = fieldSetFlags()[31] ? this.code_distributeur : (java.lang.CharSequence) defaultValue(fields()[31]);
-        record.code_pdv = fieldSetFlags()[32] ? this.code_pdv : (java.lang.CharSequence) defaultValue(fields()[32]);
-        record.id_commande = fieldSetFlags()[33] ? this.id_commande : (java.lang.CharSequence) defaultValue(fields()[33]);
-        record.id_action = fieldSetFlags()[34] ? this.id_action : (java.lang.CharSequence) defaultValue(fields()[34]);
-        record.id_demande_identification = fieldSetFlags()[35] ? this.id_demande_identification : (java.lang.CharSequence) defaultValue(fields()[35]);
-        record.id_demande_resiliation = fieldSetFlags()[36] ? this.id_demande_resiliation : (java.lang.CharSequence) defaultValue(fields()[36]);
-        record.id_case = fieldSetFlags()[37] ? this.id_case : (java.lang.CharSequence) defaultValue(fields()[37]);
-        record.id_user_interaction = fieldSetFlags()[38] ? this.id_user_interaction : (java.lang.CharSequence) defaultValue(fields()[38]);
-        record.statut_case = fieldSetFlags()[39] ? this.statut_case : (java.lang.CharSequence) defaultValue(fields()[39]);
-        record.interaction_client = fieldSetFlags()[40] ? this.interaction_client : (java.lang.CharSequence) defaultValue(fields()[40]);
-        record.numero_appelant = fieldSetFlags()[41] ? this.numero_appelant : (java.lang.CharSequence) defaultValue(fields()[41]);
-        record.numero_client = fieldSetFlags()[42] ? this.numero_client : (java.lang.CharSequence) defaultValue(fields()[42]);
-        record.numero_contact_client = fieldSetFlags()[43] ? this.numero_contact_client : (java.lang.CharSequence) defaultValue(fields()[43]);
-        record.offre = fieldSetFlags()[44] ? this.offre : (java.lang.CharSequence) defaultValue(fields()[44]);
-        record.ville_partenaire = fieldSetFlags()[45] ? this.ville_partenaire : (java.lang.CharSequence) defaultValue(fields()[45]);
-        record.prestataire = fieldSetFlags()[46] ? this.prestataire : (java.lang.CharSequence) defaultValue(fields()[46]);
-        record.id_profil = fieldSetFlags()[47] ? this.id_profil : (java.lang.CharSequence) defaultValue(fields()[47]);
-        record.source_contact = fieldSetFlags()[48] ? this.source_contact : (java.lang.CharSequence) defaultValue(fields()[48]);
-        record.type_interaction_crm = fieldSetFlags()[49] ? this.type_interaction_crm : (java.lang.CharSequence) defaultValue(fields()[49]);
-        record.type_offre = fieldSetFlags()[50] ? this.type_offre : (java.lang.CharSequence) defaultValue(fields()[50]);
-        record.date_interaction_crm = fieldSetFlags()[51] ? this.date_interaction_crm : (java.lang.CharSequence) defaultValue(fields()[51]);
-        record.id_client = fieldSetFlags()[52] ? this.id_client : (java.lang.CharSequence) defaultValue(fields()[52]);
-        record.region_partenaire = fieldSetFlags()[53] ? this.region_partenaire : (java.lang.CharSequence) defaultValue(fields()[53]);
-        record.ancienete_ligne = fieldSetFlags()[54] ? this.ancienete_ligne : (java.lang.CharSequence) defaultValue(fields()[54]);
-        record.login_rvr = fieldSetFlags()[55] ? this.login_rvr : (java.lang.CharSequence) defaultValue(fields()[55]);
+        record.orderId = fieldSetFlags()[0] ? this.orderId : (java.lang.CharSequence) defaultValue(fields()[0]);
+        record.customerId = fieldSetFlags()[1] ? this.customerId : (java.lang.CharSequence) defaultValue(fields()[1]);
+        record.orderDate = fieldSetFlags()[2] ? this.orderDate : (java.lang.CharSequence) defaultValue(fields()[2]);
+        record.shippingAddress = fieldSetFlags()[3] ? this.shippingAddress : (java.lang.CharSequence) defaultValue(fields()[3]);
+        record.billingAddress = fieldSetFlags()[4] ? this.billingAddress : (java.lang.CharSequence) defaultValue(fields()[4]);
+        record.orderStatus = fieldSetFlags()[5] ? this.orderStatus : (java.lang.CharSequence) defaultValue(fields()[5]);
+        record.paymentMethod = fieldSetFlags()[6] ? this.paymentMethod : (java.lang.CharSequence) defaultValue(fields()[6]);
+        record.totalAmount = fieldSetFlags()[7] ? this.totalAmount : (java.lang.CharSequence) defaultValue(fields()[7]);
+        record.currency = fieldSetFlags()[8] ? this.currency : (java.lang.CharSequence) defaultValue(fields()[8]);
+        record.productId_1 = fieldSetFlags()[9] ? this.productId_1 : (java.lang.CharSequence) defaultValue(fields()[9]);
+        record.productName_1 = fieldSetFlags()[10] ? this.productName_1 : (java.lang.CharSequence) defaultValue(fields()[10]);
+        record.quantity_1 = fieldSetFlags()[11] ? this.quantity_1 : (java.lang.CharSequence) defaultValue(fields()[11]);
+        record.price_1 = fieldSetFlags()[12] ? this.price_1 : (java.lang.CharSequence) defaultValue(fields()[12]);
+        record.productId_2 = fieldSetFlags()[13] ? this.productId_2 : (java.lang.CharSequence) defaultValue(fields()[13]);
+        record.productName_2 = fieldSetFlags()[14] ? this.productName_2 : (java.lang.CharSequence) defaultValue(fields()[14]);
+        record.quantity_2 = fieldSetFlags()[15] ? this.quantity_2 : (java.lang.CharSequence) defaultValue(fields()[15]);
+        record.price_2 = fieldSetFlags()[16] ? this.price_2 : (java.lang.CharSequence) defaultValue(fields()[16]);
+        record.productId_3 = fieldSetFlags()[17] ? this.productId_3 : (java.lang.CharSequence) defaultValue(fields()[17]);
+        record.productName_3 = fieldSetFlags()[18] ? this.productName_3 : (java.lang.CharSequence) defaultValue(fields()[18]);
+        record.quantity_3 = fieldSetFlags()[19] ? this.quantity_3 : (java.lang.CharSequence) defaultValue(fields()[19]);
+        record.price_3 = fieldSetFlags()[20] ? this.price_3 : (java.lang.CharSequence) defaultValue(fields()[20]);
         return record;
       } catch (java.lang.Exception e) {
         throw new org.apache.avro.AvroRuntimeException(e);
